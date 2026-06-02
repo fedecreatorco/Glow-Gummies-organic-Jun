@@ -1,949 +1,372 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan Orgánico · Glow Gummies · JUN 2025</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg-primary:#0F0F1A;
-  --bg-secondary:#16162A;
-  --bg-card:#1E1E35;
-  --bg-card-hover:#252540;
-  --color-pink:#FF6B9D;
-  --color-teal:#6ECFC4;
-  --color-purple:#A78BFA;
-  --color-yellow:#F9C846;
-  --text-primary:#F0EEFF;
-  --text-secondary:#9E9BC0;
-  --text-muted:#6B6890;
-  --border:#2A2A45;
-  --tofu-bg:#2D1B1B;--tofu-text:#FF8A70;--tofu-badge:#FF6B4A;
-  --mofu-bg:#0F2520;--mofu-text:#6ECFC4;--mofu-badge:#3DB8AA;
-  --bofu-bg:#1A2810;--bofu-text:#A3D977;--bofu-badge:#7AC143;
-  --radius:14px;--radius-sm:8px;
-  --font:'Inter',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--font);min-height:100vh;line-height:1.6}
-/* NAV */
-.top-nav{position:sticky;top:0;z-index:100;background:rgba(15,15,26,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
-.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:8px;height:56px}
-.nav-logo{font-size:15px;font-weight:700;color:var(--color-pink);margin-right:16px;white-space:nowrap}
-.nav-logo span{color:var(--text-secondary);font-weight:400}
-.tab-btn{background:none;border:none;color:var(--text-secondary);font:500 13px var(--font);padding:6px 14px;border-radius:var(--radius-sm);cursor:pointer;transition:.15s;white-space:nowrap}
-.tab-btn:hover{color:var(--text-primary);background:var(--bg-card)}
-.tab-btn.active{color:var(--color-pink);background:rgba(255,107,157,.1)}
-.tab-section{display:none;max-width:1280px;margin:0 auto;padding:32px 24px 80px}
-.tab-section.active{display:block}
-/* HERO */
-.hero{background:linear-gradient(135deg,#1A0A2E 0%,#0F1F2E 50%,#0A2010 100%);border-radius:var(--radius);padding:48px 40px;margin-bottom:32px;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,107,157,.15),transparent 70%);pointer-events:none}
-.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--color-pink);margin-bottom:12px}
-.hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
-.hero h1 em{font-style:normal;color:var(--color-teal)}
-.hero-sub{font-size:16px;color:var(--text-secondary);max-width:580px;line-height:1.7}
-.hero-stats{display:flex;gap:32px;margin-top:32px;flex-wrap:wrap}
-.hero-stat strong{display:block;font-size:28px;font-weight:800;color:var(--color-pink)}
-.hero-stat span{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em}
-/* PILLAR GRID */
-.section-title{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:20px}
-.pillar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:32px}
-.pillar-card{background:var(--bg-card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);transition:.2s}
-.pillar-card:hover{border-color:var(--color-pink);transform:translateY(-2px)}
-.pillar-num{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
-.pillar-card:nth-child(1) .pillar-num{color:#F9C846}
-.pillar-card:nth-child(2) .pillar-num{color:#6ECFC4}
-.pillar-card:nth-child(3) .pillar-num{color:#A78BFA}
-.pillar-card:nth-child(4) .pillar-num{color:#FF6B9D}
-.pillar-card h3{font-size:18px;font-weight:700;margin-bottom:8px}
-.pillar-card p{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:14px}
-.pillar-tag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:4px;font-weight:600;background:rgba(255,255,255,.06);color:var(--text-secondary)}
-/* ICP */
-.icp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:32px}
-.icp-card{background:var(--bg-card);border-radius:var(--radius);padding:28px;border:1px solid var(--border)}
-.icp-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:16px}
-.icp-card:nth-child(1) .icp-tag{background:rgba(255,107,157,.15);color:var(--color-pink)}
-.icp-card:nth-child(2) .icp-tag{background:rgba(110,207,196,.15);color:var(--color-teal)}
-.icp-card:nth-child(3) .icp-tag{background:rgba(167,139,250,.15);color:var(--color-purple)}
-.icp-card h3{font-size:20px;font-weight:700;margin-bottom:4px}
-.icp-card .icp-age{font-size:13px;color:var(--text-muted);margin-bottom:16px}
-.icp-detail{font-size:13px;color:var(--text-secondary);line-height:1.7}
-.icp-detail strong{color:var(--text-primary);display:block;margin-top:12px;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
-/* CALENDAR */
-.cal-table{width:100%;border-collapse:collapse;border-radius:var(--radius);overflow:hidden}
-.cal-table th{background:var(--bg-card);padding:12px 16px;text-align:left;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);border-bottom:1px solid var(--border)}
-.cal-table td{padding:14px 16px;font-size:14px;border-bottom:1px solid var(--border);background:var(--bg-secondary)}
-.cal-table tr:last-child td{border-bottom:none}
-.cal-pilar{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700}
-.cp-e{background:rgba(249,200,70,.15);color:#F9C846}
-.cp-ed{background:rgba(110,207,196,.15);color:#6ECFC4}
-.cp-v{background:rgba(167,139,250,.15);color:#A78BFA}
-.cp-a{background:rgba(255,107,157,.15);color:#FF6B9D}
-/* CREATIVE WIDGET */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;align-items:center}
-.filter-label{font-size:12px;color:var(--text-muted);margin-right:4px}
-.filter-btn{background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);font:500 12px var(--font);padding:6px 14px;border-radius:20px;cursor:pointer;transition:.15s}
-.filter-btn:hover,.filter-btn.on{background:var(--color-pink);border-color:var(--color-pink);color:#fff}
-.filter-sep{width:1px;height:24px;background:var(--border);margin:0 4px}
-.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.v-card{background:var(--bg-card);border-radius:var(--radius);padding:20px;border:1.5px solid var(--border);cursor:pointer;transition:.2s}
-.v-card:hover{border-color:rgba(255,107,157,.4);transform:translateY(-2px)}
-.v-card.open{border-color:var(--color-teal)}
-.v-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
-.fu-badge{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
-.fu-TOFU{background:var(--tofu-bg);color:var(--tofu-text)}
-.fu-MOFU{background:var(--mofu-bg);color:var(--mofu-text)}
-.fu-BOFU{background:var(--bofu-bg);color:var(--bofu-text)}
-.pi-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:4px;background:rgba(255,255,255,.07);color:var(--text-muted)}
-.v-card-id{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:.08em;margin-bottom:6px}
-.v-card-fmt{font-size:13px;font-weight:600;color:var(--text-primary);margin-bottom:8px}
-.v-card-hook{font-size:13px;color:var(--text-secondary);line-height:1.5;font-style:italic;margin-bottom:14px}
-.v-card-meta{display:flex;gap:8px;flex-wrap:wrap}
-.v-card-tag{font-size:11px;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.05);color:var(--text-muted)}
-/* DETAIL PANEL */
-.v-detail{display:none;background:var(--bg-secondary);border-radius:var(--radius);border:1px solid var(--border);padding:28px;margin-top:16px;margin-bottom:8px}
-.v-detail.open{display:block}
-.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-@media(max-width:700px){.detail-grid{grid-template-columns:1fr}}
-.detail-col h4{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px}
-.cut-row{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start}
-.cut-ts{font-size:11px;font-weight:700;color:var(--color-teal);white-space:nowrap;padding-top:2px;min-width:50px}
-.cut-desc{font-size:13px;color:var(--text-secondary);line-height:1.5}
-.prompt-block{background:var(--bg-card);border-radius:var(--radius-sm);padding:16px;margin-bottom:12px;border:1px solid var(--border)}
-.prompt-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-teal);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
-.copy-btn{background:rgba(110,207,196,.15);border:none;color:var(--color-teal);font:600 10px var(--font);padding:3px 10px;border-radius:4px;cursor:pointer;transition:.15s;letter-spacing:.04em}
-.copy-btn:hover{background:var(--color-teal);color:#000}
-.prompt-text{font-size:12px;color:var(--text-secondary);line-height:1.6;font-family:'Courier New',monospace}
-.vo-block{background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.2);border-radius:var(--radius-sm);padding:16px;margin-bottom:12px}
-.vo-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-pink);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
-.vo-text{font-size:13px;color:var(--text-primary);line-height:1.7}
-.detail-close{background:var(--bg-card);border:1px solid var(--border);color:var(--text-muted);font:500 12px var(--font);padding:6px 16px;border-radius:var(--radius-sm);cursor:pointer;margin-top:16px;transition:.15s}
-.detail-close:hover{color:var(--text-primary)}
-.ugc-note{font-size:11px;color:var(--color-yellow);padding:8px 12px;background:rgba(249,200,70,.07);border-radius:var(--radius-sm);margin-top:12px;border:1px solid rgba(249,200,70,.15)}
-/* PROD SECTION */
-.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:28px}
-.prod-card{background:var(--bg-card);border-radius:var(--radius);padding:20px;border:1px solid var(--border)}
-.prod-card h4{font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:8px}
-.prod-card ul{list-style:none;padding:0}
-.prod-card li{font-size:12px;color:var(--text-secondary);padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)}
-.prod-card li a{color:var(--color-teal);text-decoration:none}
-.prod-card li a:hover{text-decoration:underline}
-.rule-box{background:rgba(249,200,70,.06);border:1px solid rgba(249,200,70,.2);border-radius:var(--radius);padding:20px;margin-bottom:16px}
-.rule-box h4{color:var(--color-yellow);font-size:13px;font-weight:700;margin-bottom:10px}
-.rule-box p{font-size:13px;color:var(--text-secondary);line-height:1.7}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Content Strategy Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep {
+            0%    {opacity: 0; margin-top: -10px}
+            100%  {opacity: 1; margin-top: 0px}
+        }
+    </style>
 </head>
-<body>
+<body class="bg-[#F9FAFB] text-gray-800 antialiased">
 
-<nav class="top-nav">
-  <div class="nav-inner">
-    <div class="nav-logo">🌿 Glow Gummies <span>· Plan Orgánico JUN 2025</span></div>
-    <button class="tab-btn active" data-tab="overview">Estrategia</button>
-    <button class="tab-btn" data-tab="icp">ICP</button>
-    <button class="tab-btn" data-tab="creativos">Creativos</button>
-    <button class="tab-btn" data-tab="calendario">Calendario</button>
-    <button class="tab-btn" data-tab="produccion">Producción</button>
-  </div>
-</nav>
-
-<!-- OVERVIEW -->
-<section class="tab-section active" id="tab-overview">
-  <div class="hero">
-    <div class="hero-eyebrow">Plan Orgánico · Colombia · TikTok + Instagram</div>
-    <h1>Contenido que <em>calienta</em>.<br>El paid que <em>convierte</em>.</h1>
-    <p class="hero-sub">21 piezas creativas diseñadas para construir autoridad de marca, educar sobre el eje intestino-piel y generar audiencia calificada sin mencionar precio ni hacer CTA de compra directa.</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><strong>21</strong><span>Piezas creativas</span></div>
-      <div class="hero-stat"><strong>4</strong><span>Pilares</span></div>
-      <div class="hero-stat"><strong>7</strong><span>Formatos</span></div>
-      <div class="hero-stat"><strong>6</strong><span>Semanas</span></div>
-    </div>
-  </div>
-
-  <p class="section-title">Los 4 pilares</p>
-  <div class="pillar-grid">
-    <div class="pillar-card">
-      <div class="pillar-num">01 · Entretenimiento</div>
-      <h3>Identificación de audiencia</h3>
-      <p>Contenido espejo — la persona se ve reflejada sin que huela a marca. Sin producto, sin doctora, sin CTA. Solo identificación pura.</p>
-      <span class="pillar-tag">TOFU · 5 piezas</span>
-    </div>
-    <div class="pillar-card">
-      <div class="pillar-num">02 · Educación</div>
-      <h3>El marco conceptual</h3>
-      <p>Posiciona el eje intestino-piel como el insight central de la marca. Quien entiende el concepto, entiende por qué existe Glow Gummies.</p>
-      <span class="pillar-tag">MOFU · 5 piezas</span>
-    </div>
-    <div class="pillar-card">
-      <div class="pillar-num">03 · Viral</div>
-      <h3>Alcance masivo</h3>
-      <p>Monta tendencias globales y las adapta al nicho. Longevidad, girl health, rutinas virales — todo reencuadrado al lenguaje de la marca.</p>
-      <span class="pillar-tag">TOFU · 5 piezas</span>
-    </div>
-    <div class="pillar-card">
-      <div class="pillar-num">04 · Autoridad</div>
-      <h3>Dra. Paola · HeyGen</h3>
-      <p>La doctora aparece como experta, no como vendedora. Tono serio, directo. Avatar HeyGen replica su forma de hablar. 6 piezas de alta conversión.</p>
-      <span class="pillar-tag">MOFU/BOFU · 6 piezas</span>
-    </div>
-  </div>
-
-  <div class="rule-box">
-    <h4>📌 Regla de oro del orgánico</h4>
-    <p>En ningún pilar se menciona precio, link ni CTA de compra directa. El producto aparece naturalmente solo en Autoridad (cuando la doctora lo menciona como herramienta) y esporádicamente en Educación. El orgánico calienta. El paid convierte.</p>
-  </div>
-</section>
-
-<!-- ICP -->
-<section class="tab-section" id="tab-icp">
-  <div class="hero">
-    <div class="hero-eyebrow">ICP · Ideal Customer Profile</div>
-    <h1>Mujer colombiana <em>20–42 años</em></h1>
-    <p class="hero-sub">Consciente de su apariencia. Activa en redes. Ha probado cremas y rutinas sin resultados. Poder adquisitivo medio-alto. Confía antes de comprar.</p>
-  </div>
-
-  <p class="section-title">Arquetipos por etapa de vida</p>
-  <div class="icp-grid">
-    <div class="icp-card">
-      <span class="icp-tag">Preventora</span>
-      <h3>20–25 años</h3>
-      <div class="icp-age">TikTok-first · Quiere glow preventivo</div>
-      <div class="icp-detail">
-        <strong>Su mundo</strong>
-        Consume TikTok 4+ horas/día. Sigue cuentas de wellness y skincare. Está en la etapa de construir su rutina. No tiene problema todavía — quiere prevenirlo.
-        <strong>Pain</strong>
-        "Todo el mundo habla de colágeno y skincare pero no sé qué funciona de verdad."
-        <strong>Gana</strong>
-        Sentirse ahead — saber cosas que las demás no saben. El glow era.
-        <strong>Contenido que la activa</strong>
-        Trending sounds, memes de identificación, "girl health", longevidad.
-      </div>
-    </div>
-    <div class="icp-card">
-      <span class="icp-tag">Ansiosa</span>
-      <h3>26–31 años</h3>
-      <div class="icp-age">Nota cambios · Busca solución real</div>
-      <div class="icp-detail">
-        <strong>Su mundo</strong>
-        Empezó a notar cambios en su piel al llegar a los 28. Ha probado cremas caras. Ha leído sobre colágeno. Nada dura. Está activa buscando la causa real.
-        <strong>Pain</strong>
-        "Mi piel cambió de la noche a la mañana y no sé por qué ni qué hacer."
-        <strong>Gana</strong>
-        Entender la causa raíz. Recuperar el control. Resultados que duran.
-        <strong>Contenido que la activa</strong>
-        POV de identificación, educación sobre eje intestino-piel, mitos desmontados.
-      </div>
-    </div>
-    <div class="icp-card">
-      <span class="icp-tag">Urgente</span>
-      <h3>32–42 años</h3>
-      <div class="icp-age">Señales reales · Acción ya</div>
-      <div class="icp-detail">
-        <strong>Su mundo</strong>
-        Ya invirtió en tratamientos. Ha ido a la dermatóloga. Los resultados no duran. Tiene poder adquisitivo y quiere la solución definitiva — no otro producto más.
-        <strong>Pain</strong>
-        "He gastado mucho en tratamientos y nada dura. Quiero atacar el problema de raíz."
-        <strong>Gana</strong>
-        Solución sistémica que funcione. Validación médica que la tranquilice.
-        <strong>Contenido que la activa</strong>
-        Dra. Paola hablando de lo que ve en consulta. Ciencia del eje intestino-piel. Resultados con datos.
-      </div>
-    </div>
-  </div>
-
-  <div class="rule-box">
-    <h4>🧠 La creencia a romper</h4>
-    <p>El ICP cree que la piel se cuida desde afuera — crema, sérum, agua. No conecta su digestión con su piel. El eje intestino-piel es el insight activador. Cuando lo entiende, cambia su marco mental — y la Dra. Paola es quien lo rompe.</p>
-  </div>
-</section>
-
-<!-- CREATIVOS -->
-<section class="tab-section" id="tab-creativos">
-  <div class="hero" style="padding:32px 36px">
-    <div class="hero-eyebrow">21 piezas · Guiones + Prompts IA</div>
-    <h1 style="font-size:28px">Tablero de producción creativa</h1>
-    <p class="hero-sub" style="font-size:14px">Haz clic en cualquier tarjeta para ver el guion completo, timeline de cortes y prompts listos para copiar en VEo3/Kling/HeyGen.</p>
-  </div>
-
-  <div class="filters">
-    <span class="filter-label">Funnel:</span>
-    <button class="filter-btn on" data-f="all">Todos</button>
-    <button class="filter-btn" data-f="TOFU">TOFU</button>
-    <button class="filter-btn" data-f="MOFU">MOFU</button>
-    <button class="filter-btn" data-f="BOFU">BOFU</button>
-    <div class="filter-sep"></div>
-    <span class="filter-label">Pilar:</span>
-    <button class="filter-btn on" data-p="all">Todos</button>
-    <button class="filter-btn" data-p="E">Entretenimiento</button>
-    <button class="filter-btn" data-p="ED">Educación</button>
-    <button class="filter-btn" data-p="V">Viral</button>
-    <button class="filter-btn" data-p="A">Autoridad</button>
-  </div>
-
-  <div class="cards-grid" id="cardsGrid"></div>
-</section>
-
-<!-- CALENDARIO -->
-<section class="tab-section" id="tab-calendario">
-  <div class="hero" style="padding:32px 36px">
-    <div class="hero-eyebrow">Distribución semanal recomendada</div>
-    <h1 style="font-size:28px">7 posts/semana · <em>0 CTAs directos</em></h1>
-    <p class="hero-sub" style="font-size:14px">El mix semanal balancea identificación, educación y autoridad. Nunca dos días seguidos del mismo pilar.</p>
-  </div>
-  <table class="cal-table">
-    <thead><tr><th>Día</th><th>Pilar</th><th>Formato</th><th>ID Pieza</th><th>Objetivo</th></tr></thead>
-    <tbody>
-      <tr><td>Lunes</td><td><span class="cal-pilar cp-ed">Educación</span></td><td>Carrusel / Video Animado</td><td>ED-01</td><td>Guardar — alto valor educativo</td></tr>
-      <tr><td>Martes</td><td><span class="cal-pilar cp-a">Autoridad</span></td><td>Talking Head HeyGen 45s</td><td>A-01</td><td>Autoridad — romper creencia</td></tr>
-      <tr><td>Miércoles</td><td><span class="cal-pilar cp-v">Viral</span></td><td>Reel trending / Audio viral</td><td>V-01 / V-05</td><td>Alcance — nueva audiencia</td></tr>
-      <tr><td>Jueves</td><td><span class="cal-pilar cp-e">Entretenimiento</span></td><td>Reel de identificación</td><td>E-01 / E-02</td><td>Identificación — comentarios</td></tr>
-      <tr><td>Viernes</td><td><span class="cal-pilar cp-ed">Educación</span></td><td>Voice-over + B-roll</td><td>ED-03</td><td>Guardar — micronutrientes</td></tr>
-      <tr><td>Sábado</td><td><span class="cal-pilar cp-v">Viral</span></td><td>Audio trending corto</td><td>V-05</td><td>Alcance — finde peak time</td></tr>
-      <tr><td>Domingo</td><td><span class="cal-pilar cp-e">Entretenimiento</span></td><td>Meme / Texto en pantalla</td><td>E-04</td><td>Compartir — identificación suave</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- PRODUCCION -->
-<section class="tab-section" id="tab-produccion">
-  <div class="hero" style="padding:32px 36px">
-    <div class="hero-eyebrow">Herramientas de producción</div>
-    <h1 style="font-size:28px">Stack de producción <em>IA-first</em></h1>
-    <p class="hero-sub" style="font-size:14px">Todo el contenido se puede producir con IA + stock gratuito. Cero casting, cero locaciones.</p>
-  </div>
-  <div class="prod-grid">
-    <div class="prod-card">
-      <h4>🎬 Video IA</h4>
-      <ul>
-        <li><a href="https://deepmind.google/veo" target="_blank">VEo3 (Google)</a> — Mejor realismo</li>
-        <li><a href="https://kling.kuaishou.com" target="_blank">Kling 3.0</a> — Movimiento fluido</li>
-        <li><a href="https://sora.com" target="_blank">Sora (OpenAI)</a> — Escenas complejas</li>
-        <li><a href="https://runwayml.com" target="_blank">Runway Gen-3</a> — Control de cámara</li>
-        <li><a href="https://pika.art" target="_blank">Pika Labs</a> — Loops + animaciones</li>
-      </ul>
-    </div>
-    <div class="prod-card">
-      <h4>🧑‍💻 Avatares IA</h4>
-      <ul>
-        <li><a href="https://heygen.com" target="_blank">HeyGen</a> — Avatar Dra. Paola</li>
-        <li><a href="https://d-id.com" target="_blank">D-ID</a> — Backup avatar</li>
-        <li><a href="https://www.synthesia.io" target="_blank">Synthesia</a> — Multi-idioma</li>
-      </ul>
-    </div>
-    <div class="prod-card">
-      <h4>🔊 Voz IA</h4>
-      <ul>
-        <li><a href="https://elevenlabs.io" target="_blank">ElevenLabs</a> — Valentina (ES)</li>
-        <li>Tono: neutral-serio, pausas deliberadas</li>
-        <li>Velocidad: media-baja</li>
-        <li>Agregar ruido ambiente +10%</li>
-      </ul>
-    </div>
-    <div class="prod-card">
-      <h4>🎞️ Stock gratuito</h4>
-      <ul>
-        <li><a href="https://pexels.com/videos" target="_blank">Pexels.com/videos</a></li>
-        <li><a href="https://pixabay.com" target="_blank">Pixabay.com</a></li>
-        <li><a href="https://mixkit.co" target="_blank">Mixkit.co</a></li>
-        <li><a href="https://freesound.org" target="_blank">Freesound.org</a> — Audio</li>
-      </ul>
-    </div>
-    <div class="prod-card">
-      <h4>✂️ Edición</h4>
-      <ul>
-        <li>CapCut — Templates virales</li>
-        <li>DaVinci Resolve — Color grading</li>
-        <li>TikTok Creative Center — Trending sounds</li>
-      </ul>
-    </div>
-    <div class="prod-card">
-      <h4>📐 HeyGen · Brief técnico</h4>
-      <ul>
-        <li>Tono: neutro-serio</li>
-        <li>Sin sonrisas forzadas</li>
-        <li>Velocidad: media-baja</li>
-        <li>Pausas antes de afirmaciones</li>
-        <li>Fondo: consultorio neutro</li>
-        <li>Subtítulos: activados</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<script>
-const cm = {};
-
-const VIDEOS = [
-/* ─── PILAR E · ENTRETENIMIENTO ─────────────────────── */
-{
-  id:'E01',n:'01',fu:'TOFU',pi:'E',fm:'Audio Viral + Texto Animado',
-  hk:'"Si desayunas café solo → tu piel lo muestra mañana"',
-  hv:'Close-up café humeante → morphing a textura de piel',
-  tl:'CapCut + TikTok Trending Sound',vl:'Sin VO — Texto en pantalla',isU:false,
-  cuts:[
-    ['0–3s','Beat de entrada. Fondo negro. Texto: "LO QUE DESAYUNAS HOY..." aparece letra por letra'],
-    ['3–8s','Imagen café solo. Texto: "Café solo ☕ → piel deshidratada"'],
-    ['8–13s','Imagen avena con fruta. Texto: "Avena + fruta 🥣 → piel feliz"'],
-    ['13–17s','Imagen pan blanco. Texto: "Pan blanco 🍞 → inflamación silenciosa"'],
-    ['17–20s','Fondo rojo. Texto grande: "Y si no desayunas nada... tu piel lo GRITA 😬"']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Macro close-up shot of a steaming espresso cup, dark rich coffee swirling slowly. The camera slowly pulls back. Dramatic dark background, golden rim lighting, cinematic grade. Warm moody tones. 10 seconds, smooth slow motion.'],
-    ['Seg 2 (10–20s)','Flat lay overhead shot transitioning between breakfast foods: oatmeal bowl with berries glowing with warm light, white bread slice looking dull and grey. Split frame graphic design aesthetic, minimal background, animated arrows appearing as text overlays. 10 seconds.']
-  ],
-  vo:'[Sin voz en off — contenido 100% texto en pantalla con trending sound]'
-},
-{
-  id:'E02',n:'02',fu:'TOFU',pi:'E',fm:'Meme Animado + Audio Dramático',
-  hk:'"POV: llegaste a los 28 y tu piel cambió de la noche a la mañana"',
-  hv:'Mujer frente al espejo, expresión de shock. Texto dramático.',
-  tl:'CapCut · Plantilla dramatic audio',vl:'Sin VO — Audio trending',isU:false,
-  cuts:[
-    ['0–3s','Texto: "POV:" en pantalla'],
-    ['3–8s','Mujer feliz, piel radiante. Texto: "27 años"'],
-    ['8–12s','Corte brusco con efecto de sonido. Misma mujer, expresión confundida'],
-    ['12–15s','Texto grande: "28 años ¿qué le pasó a mi piel? 😭"']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Young Colombian woman, 27 years old, smiling confidently in bathroom mirror, perfect glowing skin, morning light, warm tones. Then quick cut to same woman looking confused and worried at her reflection, touching her cheek with concern. Two-part scene, social media vertical 9:16 format, natural candid lighting. 10 seconds.'],
-    ['Seg 2 (10–15s)','Close-up of young woman\'s hands gently pressing on cheek skin in bathroom mirror, worried expression visible in reflection, morning natural light, realistic iPhone-style footage aesthetic, Colombian home bathroom setting. 5 seconds.']
-  ],
-  vo:'[Sin voz en off — audio trending + texto en pantalla]'
-},
-{
-  id:'E03',n:'03',fu:'TOFU',pi:'E',fm:'Video Animado IA · Listicle',
-  hk:'"Rating de hábitos que destruyen tu piel sin que lo sepas"',
-  hv:'Interfaz de rating animada. Cada hábito aparece con puntuación de daño.',
-  tl:'Kling 3.0 + CapCut Texto Animado',vl:'Valentina · ElevenLabs',isU:false,
-  cuts:[
-    ['0–4s','Hook animado: "HÁBITOS que DESTRUYEN tu piel (calificados 0–10)"'],
-    ['4–10s','Aparece: "Dormir menos de 6 horas → Daño: 8/10 🔴"'],
-    ['10–16s','Aparece: "Comer ultraprocesados diario → Daño: 9/10 🔴"'],
-    ['16–22s','Aparece: "Estrés crónico sin gestión → Daño: 10/10 ☠️"'],
-    ['22–28s','Aparece: "Café en ayunas todos los días → Daño: 7/10 🟠"'],
-    ['28–30s','Final: "Y lo peor: ninguno se ve en el espejo al día siguiente"']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Animated rating interface appearing on dark background, bold graphic design, neon red and orange accent colors. Numbers 0-10 sliding scale appearing. Sleek modern UI animation style. Text cards appearing with smooth transitions. Dark aesthetic, TikTok-native vertical format 9:16. 10 seconds.'],
-    ['Seg 2 (10–20s)','Continuation of animated rating cards. Each card slides in with impact. Cinematic motion graphics style. Dark background with glowing UI elements. Bad habit items appearing one by one with dramatic red rating indicators. Smooth professional animation. 10 seconds.'],
-    ['Seg 3 (20–30s)','Final dramatic card appearing with bold text on dark background, red warning color scheme, animated underline effect, slight screen shake for emphasis. Closing statement text in bold white font. Cinematic fade out. 10 seconds.']
-  ],
-  vo:'Ninguno de estos hábitos te avisa que está destruyendo tu piel. No hay dolor. No hay señal inmediata. Solo un día te miras al espejo y no reconoces tu cara.'
-},
-{
-  id:'E04',n:'04',fu:'TOFU',pi:'E',fm:'Texto en Pantalla · Meme',
-  hk:'"Crema de $300k vs. lo que come tu intestino"',
-  hv:'Contraste visual: crema de lujo vs. foto de comida poco saludable',
-  tl:'CapCut texto animado',vl:'Sin VO — Texto en pantalla',isU:false,
-  cuts:[
-    ['0–4s','Lado izquierdo: foto crema de lujo. Texto: "Crema de $300.000"'],
-    ['4–7s','Lado derecho aparece: foto de frituras/comida procesada. Texto: "Lo que come tu intestino"'],
-    ['7–10s','Texto final en centro: "Spoiler: la crema pierde 😬"']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Split screen comparison. Left side: luxury skincare cream jar with elegant lighting, marble background, gold lid gleaming. Right side: fast food, fried snacks, sugary drinks on messy table. Bold dividing line between sides. Dramatic backlighting contrast. Text overlay areas visible. 10 seconds, vertical 9:16.']
-  ],
-  vo:'[Sin voz en off — imagen + texto hablan solos]'
-},
-{
-  id:'E05',n:'05',fu:'TOFU',pi:'E',fm:'Voice Over + B-roll · Listicle',
-  hk:'"5 señales de que tu piel está pidiendo ayuda desde adentro"',
-  hv:'Secuencia de imágenes de piel con voz en off suave. Sin solución.',
-  tl:'Pexels B-roll + ElevenLabs VO',vl:'Valentina · ElevenLabs · tono suave',isU:false,
-  cuts:[
-    ['0–5s','Intro suave. Toma de manos mirando piel. VO: "Tu piel habla. El problema es que pocos saben escucharla."'],
-    ['5–12s','VO: "Señal 1: Poros dilatados que no mejoran con nada..." B-roll cara'],
-    ['12–19s','VO: "Señal 2: Opacidad constante aunque tomes agua..." B-roll espejo'],
-    ['19–24s','VO: "Señal 3: Granitos que salen en ciclos, no al azar..." B-roll piel'],
-    ['24–28s','VO: "Señal 4: Piel sensible a lo que comes..." B-roll comida'],
-    ['28–30s','VO: "Si llevas más de 3 meses con alguna de estas... hay algo más."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Slow cinematic b-roll of a young woman\'s hands gently examining her facial skin, soft morning light, bathroom setting. Intimate close-up, shallow depth of field, warm neutral tones. Colombian woman, natural appearance, no heavy makeup. Contemplative mood. 10 seconds.'],
-    ['Seg 2 (10–20s)','B-roll sequence: close-up skin texture under natural light, woman looking at mirror with thoughtful expression, macro shot of skin pores, gentle camera movement. Soft warm lighting, morning routine aesthetic, neutral bathroom backdrop. 10 seconds.'],
-    ['Seg 3 (20–30s)','Slow motion b-roll of woman eating food, then touching her face gently. Cut to close-up of face in mirror, subtle concerned expression. Warm home kitchen lighting. Cinematic slow motion. Colombian home aesthetic. 10 seconds.']
-  ],
-  vo:'Tu piel habla. El problema es que pocos saben escucharla.\n\nSeñal 1: Poros dilatados que no mejoran con ninguna crema ni rutina.\nSeñal 2: Opacidad constante aunque tomes dos litros de agua al día.\nSeñal 3: Granitos que salen en ciclos predecibles, no al azar.\nSeñal 4: Piel sensible justo después de comer ciertos alimentos.\nSeñal 5: Líneas finas que aparecen antes de lo esperado para tu edad.\n\nSi llevas más de 3 meses con alguna de estas... hay algo más detrás.'
-},
-
-/* ─── PILAR ED · EDUCACIÓN ────────────────────────── */
-{
-  id:'ED01',n:'06',fu:'MOFU',pi:'ED',fm:'Video Animado IA · Educativo',
-  hk:'"El eje intestino-piel explicado en 60 segundos"',
-  hv:'Animación que muestra el intestino y la piel conectados por flechas luminosas',
-  tl:'Sora + CapCut Motion Graphics',vl:'Valentina · ElevenLabs',isU:false,
-  cuts:[
-    ['0–8s','Animación: silueta humana. Aparece intestino iluminado. VO: "Tu intestino tiene más neuronas que tu médula espinal."'],
-    ['8–18s','Animación: flechas de intestino → sangre → piel. VO: "Cada cosa que inflama tu intestino llega a tu piel en 48–72 horas."'],
-    ['18–30s','Animación: microbioma intestinal. VO: "El 80% de tu sistema inmune vive ahí. Y cuando se desequilibra..."'],
-    ['30–42s','Animación: piel reaccionando. VO: "...tu piel es la primera en reportarlo."'],
-    ['42–52s','Texto animado: ingredientes. VO: "Colágeno, zinc, probióticos — no son para la piel. Son para el intestino que produce la piel."'],
-    ['52–60s','Cierre. VO: "Eso es el eje intestino-piel. Y es lo que nadie te estaba contando."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Animated human body silhouette, glowing intestine highlighted in warm gold, soft pulsing light effect. Medical illustration style but modern and approachable. Dark navy background, clean white/gold color scheme. Neurons lighting up in intestine shown as small sparkling points. Smooth flowing animation. 10 seconds.'],
-    ['Seg 2 (10–20s)','Animated arrows flowing from glowing intestine through bloodstream represented as luminous pathways, reaching the skin surface shown as outer layer. Abstract but clear scientific visualization. Color flow: warm gold to rose pink. Smooth fluid motion. Dark background. 10 seconds.'],
-    ['Seg 3 (20–30s)','Animated microbiome visualization: colorful microorganisms in intestine, diverse colony shown as small glowing entities, some balanced symmetrically, then some disappearing showing imbalance. Abstract but visually engaging scientific animation. 10 seconds.'],
-    ['Seg 4 (30–40s)','Animated skin surface reacting: cross-section view of skin layers, inflammation shown as red glow spreading, surface texture changing. Then healthy state shown with collagen fibers glowing gold. Medical illustration style, clean animation. 10 seconds.'],
-    ['Seg 5 (40–50s)','Animated ingredient molecules floating and connecting: collagen triple helix structure, zinc molecule, probiotic capsule shapes. All flowing toward intestine icon, not toward skin directly. Clean scientific but beautiful animation, dark background with luminous elements. 10 seconds.'],
-    ['Seg 6 (50–60s)','Final reveal animation: intestine and skin connected by glowing bridge, both healthy and luminous. Clean bold text appearing: "EJE INTESTINO-PIEL". Triumphant feel, warm glow. Smooth fade to brand colors (pink/teal). 10 seconds.']
-  ],
-  vo:'Tu intestino tiene más neuronas que tu médula espinal. Es un órgano que piensa — y se comunica constantemente con tu piel.\n\nCada cosa que lo inflama — comida procesada, estrés, antibióticos — llega a tu piel en 48 a 72 horas.\n\nEl 80% de tu sistema inmune vive en tu microbioma intestinal. Cuando ese microbioma se desequilibra, tu piel es la primera en reportarlo.\n\nPor eso el colágeno, el zinc y los probióticos no son para la piel. Son para el intestino que produce la piel.\n\nEso es el eje intestino-piel. Y es lo que nadie te estaba contando.'
-},
-{
-  id:'ED02',n:'07',fu:'MOFU',pi:'ED',fm:'Video Animado IA · Comparativa Científica',
-  hk:'"Por qué el colágeno que te inyectas no es lo mismo que el que produces"',
-  hv:'Animación molécula de colágeno — externo vs. endógeno',
-  tl:'Kling 3.0 + Motion Graphics',vl:'Valentina · ElevenLabs',isU:false,
-  cuts:[
-    ['0–8s','Animación: molécula colágeno tipo I desde afuera. VO: "El colágeno que te aplicas en crema — su molécula es demasiado grande para penetrar el tejido."'],
-    ['8–18s','Animación: molécula bloqueada en epidermis. VO: "Literalmente se queda en la superficie. Hidrata. Pero no reconstruye."'],
-    ['18–28s','Animación: fibroblastos produciendo colágeno desde adentro. VO: "Tu cuerpo sí puede producir colágeno propio. Lo hacen los fibroblastos."'],
-    ['28–38s','VO: "Pero necesitan tres cosas: vitamina C, zinc y aminoácidos específicos como glicina y prolina."'],
-    ['38–45s','VO: "No crema. No inyección. Nutrición interna con los precursores correctos."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Animated collagen molecule represented as triple helix structure attempting to penetrate skin layer barrier. The molecule is shown as too large, blocked at the epidermis surface. Scientific but beautiful visualization. Rose gold and white color scheme. Dark background. Smooth animation showing molecular size vs skin pore comparison. 10 seconds.'],
-    ['Seg 2 (10–20s)','Cross-section animation of skin layers: epidermis, dermis shown clearly. Collagen molecule sitting on surface highlighted. Then zoom into dermis layer showing fibroblast cells glowing and actively producing collagen fibers internally. Green/gold coloring for healthy production. 10 seconds.'],
-    ['Seg 3 (20–30s)','Animated fibroblast cells synthesizing collagen triple helix structures. Small molecules labeled (Vit C, Zinc, Glycine) floating in, being absorbed by fibroblasts, which then produce glowing collagen fibers. Assembly-line metaphor animation, clean and clear. 10 seconds.'],
-    ['Seg 4 (30–45s)','Split screen comparison animation: left side crème jar with blocked molecules, right side supplement capsule with molecules successfully entering fibroblasts and creating collagen. Clear win/lose visual. Bold graphic style. Text overlays appearing. 15 seconds.']
-  ],
-  vo:'El colágeno que te aplicas en crema tiene una molécula demasiado grande para penetrar tu tejido. Literalmente se queda en la superficie. Hidrata. Pero no reconstruye.\n\nAhora, el colágeno inyectado dura máximo 6 meses porque tu cuerpo lo descompone eventualmente.\n\nLo que sí funciona: darle a tu cuerpo los precursores para que produzca su propio colágeno. Los fibroblastos en tu dermis lo hacen naturalmente — pero necesitan vitamina C, zinc, y aminoácidos como glicina y prolina.\n\nNo crema. No inyección. Nutrición interna con los precursores correctos.'
-},
-{
-  id:'ED03',n:'08',fu:'MOFU',pi:'ED',fm:'Voice Over + B-roll · Micronutrientes',
-  hk:'"Lo que el zinc hace en tu piel que ninguna crema puede hacer"',
-  hv:'B-roll científico: células en microscopio, alimentos con zinc, piel saludable',
-  tl:'Pexels + ElevenLabs + CapCut',vl:'Valentina · ElevenLabs · tono didáctico',isU:false,
-  cuts:[
-    ['0–7s','B-roll: microscopia de células. VO: "El zinc no es un mineral cualquiera para tu piel."'],
-    ['7–15s','B-roll: piel saludable. VO: "Regula la producción de sebo — el exceso de grasa que tapona poros."'],
-    ['15–23s','B-roll: alimentos con zinc. VO: "Acelera la cicatrización. Reduce la inflamación. Y modula la síntesis de queratina."'],
-    ['23–33s','VO: "El problema: el 80% de las mujeres en LATAM tiene deficiencia subclínica de zinc. Nunca llega a ser diagnóstico — pero su piel lo sufre."'],
-    ['33–45s','VO: "Junto con la biotina y el selenio, es uno de los tres micronutrientes más ignorados en skincare. Y los que más diferencia hacen desde adentro."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Macro b-roll footage of healthy glowing skin, close-up of smooth skin texture in warm light. Then microscope-style visualization of skin cells. Scientific aesthetic but warm and approachable. Golden hour lighting on skin. 10 seconds.'],
-    ['Seg 2 (10–20s)','B-roll of zinc-rich foods: pumpkin seeds, oysters, dark chocolate, chickpeas on clean white surface. Food photography style, overhead shot, natural lighting. Then transition to skin surface with visible improved texture. Split screen aesthetic. 10 seconds.'],
-    ['Seg 3 (20–30s)','B-roll of woman\'s clear healthy skin, natural morning light. Then graphic animation overlay showing zinc molecule symbol with arrows pointing to: sebum regulation, cell repair, inflammation reduction. Clean infographic style over footage. 10 seconds.'],
-    ['Seg 4 (30–45s)','B-roll of Latin American woman, 30s, looking at her skin in mirror with concern, then a second woman looking confident with good skin. Contrast between deficient and healthy state. Warm home lighting, natural setting, authentic feel. 15 seconds.']
-  ],
-  vo:'El zinc no es un mineral cualquiera para tu piel. Es el que regula la producción de sebo — el exceso de grasa que tapona poros. Es el que acelera la cicatrización. Y el que modula la síntesis de queratina, la proteína base de tu piel.\n\nEl problema es que el 80% de las mujeres en LATAM tiene deficiencia subclínica de zinc. Nunca llega a ser un diagnóstico claro — pero su piel lo sufre cada día.\n\nJunto con la biotina y el selenio, es uno de los tres micronutrientes más ignorados en skincare. Y los que más diferencia hacen cuando los atacas desde adentro.'
-},
-{
-  id:'ED04',n:'09',fu:'MOFU',pi:'ED',fm:'Video Animado IA · Concepto Científico',
-  hk:'"Inflamación silenciosa: el enemigo invisible de tu piel"',
-  hv:'Animación fuego suave bajo la piel. Visual de inflamación crónica.',
-  tl:'Sora + VEo3',vl:'Valentina · ElevenLabs · tono serio',isU:false,
-  cuts:[
-    ['0–8s','Animación: silueta con fuego suave interno. VO: "La inflamación crónica no duele. No se ve. Pero está destruyendo tu colágeno."'],
-    ['8–18s','Animación: cortisol/azúcar en sangre → piel. VO: "Se llama inflammaging — el envejecimiento por inflamación. Y lo desencadenan cosas que haces todos los días."'],
-    ['18–28s','Animación: lista animada. VO: "Azúcar refinada. Aceites vegetales procesados. Poco sueño. Estrés sin resolver."'],
-    ['28–38s','Animación: intestino inflamado → piel reactiva. VO: "El intestino es el epicentro. Cuando su microbioma se altera, libera citoquinas inflamatorias que llegan directo a tu dermis."'],
-    ['38–45s','Cierre. VO: "No es tu crema la que falla. Es que estás atacando el síntoma, no la causa."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Abstract animation of human silhouette with subtle internal glow of low flames under skin surface, gentle and slow burning effect. Cross section view showing inflammation layer between gut and skin. Cinematic dark tones with warm red/orange internal light. Ominous but beautiful visualization. 10 seconds.'],
-    ['Seg 2 (10–20s)','Animated sequence: sugar crystals entering bloodstream shown as golden particles causing spikes, cortisol molecule represented as stress lightning bolt, both triggering red inflammatory response in skin cross-section. Scientific but visually compelling animation. 10 seconds.'],
-    ['Seg 3 (20–30s)','Animated list items appearing one by one with impact: sugar icon, processed oil droplet, moon with X (poor sleep), stressed brain. Each item triggers small inflammation ripple animation. Dark background, red/orange accent colors. Bold graphic style. 10 seconds.'],
-    ['Seg 4 (30–45s)','Animation of gut/intestine showing microbiome imbalance (some bacteria disappearing), then inflammatory molecules (cytokines shown as red arrows) traveling through bloodstream to skin surface causing visible reaction. Detailed but clear cause-and-effect visualization. 15 seconds.']
-  ],
-  vo:'La inflamación crónica no duele. No se ve en el espejo al día siguiente. Pero está destruyendo tu colágeno silenciosamente.\n\nSe llama inflammaging — el envejecimiento acelerado por inflamación. Y lo desencadenan cosas que probablemente haces todos los días: azúcar refinada, aceites vegetales procesados, dormir menos de 7 horas, estrés crónico sin resolver.\n\nEl intestino es el epicentro. Cuando su microbioma se desequilibra, libera citoquinas inflamatorias que viajan directo a tu dermis y descomponen el colágeno que tanto trabajaste en construir.\n\nNo es que tu crema falle. Es que estás atacando el síntoma, no la causa.'
-},
-{
-  id:'ED05',n:'10',fu:'MOFU',pi:'ED',fm:'Listicle en Video · Mitos Desmontados',
-  hk:'"5 mitos de skincare que sigues creyendo en 2025"',
-  hv:'Formato Myth/Reality animado. Cada mito aparece tachado.',
-  tl:'CapCut Text Animation + B-roll',vl:'Valentina · ElevenLabs · tono directo',isU:false,
-  cuts:[
-    ['0–5s','Hook: "5 cosas que te dijeron sobre skincare que NO son verdad"'],
-    ['5–15s','Mito 1: "Tomar más agua hidrata tu piel" → MITO. Realidad: se va por el riñón, no por la piel'],
-    ['15–25s','Mito 2: "Los poros se abren y cierran con temperatura" → MITO. Los poros no tienen músculo'],
-    ['25–35s','Mito 3: "El colágeno en crema reconstruye el tejido" → MITO. La molécula no penetra'],
-    ['35–47s','Mito 4: "La piel grasa no necesita hidratación" → MITO. La deshidratación produce más sebo'],
-    ['47–60s','Mito 5: "Las arrugas son solo de la edad" → MITO. El 70% es por hábitos internos. Cierre.']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Bold animated text "MITO" stamp appearing in red over each belief statement. Clean graphic design, dark background, high contrast. Fast-paced text animations with satisfying thud sound effect timing. Modern TikTok-native aesthetic. 10 seconds.'],
-    ['Seg 2 (10–20s)','Split screen: left "MITO" text with incorrect belief, right "REALIDAD" with correct information. Animated underlines and strikethroughs. Clinical but engaging graphic style. White text on dark, accent colors for myth vs reality labels. 10 seconds.'],
-    ['Seg 3 (20–30s)','Animated skin cross-section showing collagen molecule being blocked at epidermis surface. Bold text overlay. Scientific illustration style transitioning to b-roll of woman applying face cream. Split screen with blocked arrow animation. 10 seconds.'],
-    ['Seg 4 (30–40s)','Animated infographic showing sebum glands over-producing when skin is dehydrated. Simple clear scientific illustration. Then healthy hydration balance shown. Bold color contrast between dehydrated (orange/red) and hydrated (blue/green). 10 seconds.'],
-    ['Seg 5 (40–60s)','Animated pie chart or visual showing 70% lifestyle vs 30% genetics split. Dramatic zoom on the 70%. Then closing text animation: "La solución está adentro, no en el frasco." Bold, cinematic text reveal on dark background. 20 seconds.']
-  ],
-  vo:'Cinco cosas que te dijeron sobre skincare que no son verdad.\n\nMito 1: Tomar más agua hidrata tu piel. Falso — el agua que tomas llega al riñón primero. La hidratación dérmica depende de ceramidas y ácido hialurónico que produce tu piel, no del agua que tomas.\n\nMito 2: Los poros se abren y cierran con vapor o hielo. Falso — los poros no tienen músculo. No se abren ni cierran.\n\nMito 3: El colágeno en crema reconstruye el tejido. Falso — la molécula es demasiado grande para penetrar la epidermis.\n\nMito 4: La piel grasa no necesita hidratación. Todo lo contrario — la deshidratación le dice a tu piel que produzca más sebo.\n\nMito 5: Las arrugas son solo consecuencia de la edad. El 70% es por hábitos internos. La solución está adentro, no en el frasco.'
-},
-
-/* ─── PILAR V · VIRAL ────────────────────────────── */
-{
-  id:'V01',n:'11',fu:'TOFU',pi:'V',fm:'Storytelling + Voice Over · Tendencia',
-  hk:'"Bienvenida a la Glow Era — el movimiento que cambia todo"',
-  hv:'Imágenes aspiracionales de mujeres radiantes, longevidad, bienestar',
-  tl:'VEo3 + ElevenLabs + CapCut',vl:'Valentina · ElevenLabs · tono aspiracional',isU:false,
-  cuts:[
-    ['0–6s','Imágenes: mujeres jóvenes radiantes, amanecer, naturaleza. VO: "Hay un movimiento global que cambió cómo las mujeres más inteligentes del mundo piensan en su cuerpo."'],
-    ['6–14s','Imágenes: Bryan Johnson, longevidad, wellness. VO: "Se llama la era de la longevidad. Y tiene una premisa simple: vivir bien empieza desde adentro."'],
-    ['14–22s','Imágenes: mujer desayunando saludable. VO: "No más parchear síntomas con cremas. No más tratamientos que duran 6 meses. Ataca la raíz."'],
-    ['22–30s','Cierre aspiracional. VO: "La Glow Era no es una tendencia. Es una forma diferente de entender tu cuerpo."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Cinematic slow-motion footage of radiant young Colombian woman, 25-30s, golden hour sunlight, hair flowing in gentle breeze, glowing healthy skin visible. Morning outdoor setting, lush green background. Aspirational lifestyle aesthetic, warm color grade. 10 seconds.'],
-    ['Seg 2 (10–20s)','Montage of wellness lifestyle: woman drinking green smoothie, morning yoga on balcony with city view, preparing healthy colorful meal in bright kitchen. Aspirational and achievable aesthetic. Warm natural tones, modern Latin American home setting. 10 seconds.'],
-    ['Seg 3 (20–30s)','Close-up of woman\'s glowing healthy face, soft morning light, minimal makeup, radiant skin, soft confident smile. Then pulls back to reveal woman living her healthy routine confidently. Cinematic quality, warm golden tones. 10 seconds.']
-  ],
-  vo:'Hay un movimiento global que cambió cómo las mujeres más inteligentes del mundo piensan en su cuerpo.\n\nSe llama la era de la longevidad. Y tiene una premisa simple: vivir bien empieza desde adentro. No más parchear síntomas. No más tratar la superficie y esperar que algo cambie profundo.\n\nLas mujeres de la Glow Era no persiguen tendencias de skincare. Construyen desde el intestino hacia afuera.\n\nLa Glow Era no es una tendencia. Es una forma diferente de entender tu cuerpo.'
-},
-{
-  id:'V02',n:'12',fu:'TOFU',pi:'V',fm:'Pantalla Dividida · Comparativa',
-  hk:'"Lo que TikTok dice que come la \'it girl\' vs. lo que su piel necesita"',
-  hv:'Dos mundos: aesthetic girl dinner vs. nutrición real para la piel',
-  tl:'CapCut Split Screen + Trending Sound',vl:'Sin VO — Texto en pantalla',isU:false,
-  cuts:[
-    ['0–4s','Setup: "Girl Dinner (TikTok edition) vs. Girl Dinner (si quieres buena piel)"'],
-    ['4–10s','Izq: matcha latte, mini pancakes, nada más. Der: tazón con proteína, verdura, grasas buenas'],
-    ['10–15s','Izq: "looks aesthetic ✨". Der: "colágeno en proceso 💪"'],
-    ['15–20s','Final: "Tu piel no sabe lo que se ve bien en TikTok. Solo sabe lo que le das de comer."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Split screen vertical video. Left side: aesthetically arranged "girl dinner" with matcha latte, crackers, small portions, pastel colors, very Instagram-worthy presentation. Right side: nutritious bowl with protein, vegetables, healthy fats, colorful and abundant. Bold dividing line. Both food photography quality. 10 seconds.'],
-    ['Seg 2 (10–20s)','Continuation split screen: left side woman eating minimal aesthetic meal looking pretty but still tired/dull skin. Right side woman eating nutritious meal with glowing confident energy. Comparison continues with text overlays. Relatable everyday setting. 10 seconds.']
-  ],
-  vo:'[Sin voz en off — trending sound + texto en pantalla genera mayor alcance orgánico]'
-},
-{
-  id:'V03',n:'13',fu:'TOFU',pi:'V',fm:'Reacción · Green Screen',
-  hk:'"Reaccionando a la rutina de skincare viral de TikTok 👀"',
-  hv:'Avatar/presentador frente a video viral de skincare como fondo',
-  tl:'HeyGen Green Screen + Video trending de fondo',vl:'Script HeyGen — Dra. Paola avatar',isU:true,
-  cuts:[
-    ['0–5s','Presentadora en frame, video de rutina viral de fondo. "Okay, veamos esto juntas."'],
-    ['5–15s','Pausa en paso de crema de colágeno. "Esto — la crema de colágeno — hidrata. Pero no reconstruye. ¿Por qué? La molécula no entra."'],
-    ['15–25s','Pausa en paso de vitamina C tópica. "La C tópica sí tiene evidencia. Pero la que más diferencia hace es la que comes."'],
-    ['25–30s','Final. "La rutina está bien. Pero le falta la mitad — la de adentro."']
-  ],
-  pts:[],
-  mp:'Colombian woman doctor, 35-40 years old, professional appearance, white lab coat or professional top, neutral clinic background (white/light gray wall), direct confident gaze at camera, slight knowing expression, natural makeup, dark hair pulled back. Studio portrait lighting, clean background suitable for green screen replacement. 9:16 vertical format, headshot to mid-torso.',
-  hs:'[mirando a cámara con expresión directa]\n\n"Okay, veamos esta rutina juntas.\n\n[pausa]\n\nEl paso del colágeno en crema... sí, hidrata. Pero no reconstruye el tejido. La molécula de colágeno es demasiado grande para penetrar la epidermis. Eso es biología básica.\n\n[pausa]\n\nLa vitamina C tópica sí tiene evidencia. Pero la concentración que realmente activa los fibroblastos viene de adentro, no de afuera.\n\n[pausa, mirando directo]\n\nLa rutina está bien. Pero le falta la mitad. La mitad de adentro."\n\n[subtle nod, end]'
-},
-{
-  id:'V04',n:'14',fu:'MOFU',pi:'V',fm:'Día en la vida · Nutrición + Análisis',
-  hk:'"What I eat in a day — pero con análisis de lo que le falta a mi piel"',
-  hv:'Lifestyle footage de alimentación de un día con overlay de análisis nutricional',
-  tl:'VEo3 + CapCut Infographic Overlay',vl:'Valentina · ElevenLabs · conversacional',isU:false,
-  cuts:[
-    ['0–8s','Mañana. Café + tostada. VO: "Desayuno estándar colombiano. Puntaje piel: 4/10. Falta proteína, zinc, vitamina C."'],
-    ['8–18s','Almuerzo. Arroz + pollo + ensalada pequeña. VO: "Mejor. Hay proteína. Pero la ensalada procesada no aporta mucho. Puntaje: 6/10."'],
-    ['18–28s','Snack. Galletas de paquete. VO: "Aquí es donde la mayoría sabotea todo. Inflamación silenciosa activada."'],
-    ['28–38s','Cena. Sopa light. VO: "Déficit de grasas buenas. Sin omega-3, sin colágeno endógeno posible."'],
-    ['38–45s','Resumen animado. VO: "El día completo: déficit de zinc, vitamina C, grasas buenas y probióticos. Tu piel te lo va a cobrar."']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Morning b-roll: Colombian woman preparing coffee and toast in bright modern kitchen, warm morning light. Overhead shot of typical breakfast. Then graphic overlay appears showing nutritional score card with ratings. Clean infographic aesthetic over lifestyle footage. 10 seconds.'],
-    ['Seg 2 (10–20s)','Lunch b-roll: typical Colombian plate with rice, chicken, small salad. Natural restaurant or home lighting. Nutritional analysis graphic overlay with checkmarks and X marks for various nutrients. Informative but casual aesthetic. 10 seconds.'],
-    ['Seg 3 (20–30s)','Close-up b-roll of packaged snacks being opened, hand reaching in. Then dramatic animated red warning flash overlay. Inflammation concept animation briefly showing. Relatable everyday scene. 10 seconds.'],
-    ['Seg 4 (30–45s)','Evening light kitchen scene, simple soup dinner. Then animated summary card appearing: daily nutritional deficit list with specific nutrients in red. Clean graphic design. Closing cinematic shot. 15 seconds.']
-  ],
-  vo:'Este es un día de alimentación bastante normal en Colombia. Veamos qué le está pasando a tu piel.\n\nDesayuno: café y tostada. Puntaje para tu piel: 4 de 10. No hay proteína, no hay zinc, no hay vitamina C.\n\nAlmuerzo: arroz, pollo y ensalada. Mejor — hay proteína. Puntaje: 6 de 10. Pero los almidones sin fibra real siguen el proceso inflamatorio.\n\nSnack de la tarde: galletas de paquete. Aquí es donde la mayoría sabotea lo que construyó en el almuerzo.\n\nCena: sopa ligera. Déficit de grasas buenas. Sin omega-3, los fibroblastos no pueden sintetizar colágeno eficientemente.\n\nDía completo: déficit de zinc, vitamina C, grasas buenas y probióticos. Tu piel lo va a cobrar en las próximas semanas.'
-},
-{
-  id:'V05',n:'15',fu:'TOFU',pi:'V',fm:'Audio Viral · Trending Sound',
-  hk:'"La gente cuando le dices que sus granitos son culpa del intestino 😂"',
-  hv:'Escena cómica de reacción de incredulidad — relatable y compartible',
-  tl:'CapCut · TikTok Trending Sound semanal',vl:'Sin VO — Audio viral',isU:false,
-  cuts:[
-    ['0–5s','Imagen: alguien señalando granito en cara'],
-    ['5–10s','Corte: expresión de "¿qué?" dramática'],
-    ['10–15s','Texto: "El intestino te llama... 📲" con trending sound de revelación']
-  ],
-  pts:[
-    ['Seg 1 (0–10s)','Relatable comedic scene: young Colombian woman pointing at her face (pimple area) with frustrated expression, then dramatic zoom to shocked/confused face at revelation. Vertical 9:16, casual iPhone-quality aesthetic, bright natural indoor light, expressive facial reactions. 10 seconds.'],
-    ['Seg 2 (10–15s)','Bold text animation on solid background: phone ringing emoji with "El intestino te llama..." text. Comedic timing animation synced to trending sound beat. Bright fun colors, meme-native aesthetic. 5 seconds.']
-  ],
-  vo:'[Sin voz — trending sound de la semana + texto en pantalla. Monitorear TikTok Creative Center cada lunes para elegir el audio correcto]'
-},
-
-/* ─── PILAR A · AUTORIDAD · HEYGEN ──────────────── */
-{
-  id:'A01',n:'16',fu:'MOFU',pi:'A',fm:'Talking Head HeyGen · Disruptivo',
-  hk:'"Como médica, esto no lo haría jamás"',
-  hv:'Dra. Paola directo a cámara. Tono serio. Sin producto.',
-  tl:'HeyGen Avatar · Dra. Paola',vl:'Voz Dra. Paola · HeyGen',isU:true,
-  cuts:[
-    ['0–5s','Hook directo a cámara. Tono neutro-serio.'],
-    ['5–15s','Práctica 1 que no haría: crema de colágeno como "tratamiento antiedad"'],
-    ['15–25s','Práctica 2: tomar colágeno hidrolizado sin vitamina C (no se absorbe)'],
-    ['25–35s','Práctica 3: blanqueadores tópicos sin atacar la inflamación interna'],
-    ['35–45s','Cierre: "No porque sean malos. Sino porque solos no atacan la causa."']
-  ],
-  pts:[],
-  mp:'Colombian female doctor, 38-42 years old, professional and authoritative appearance, wearing white lab coat, neutral medical office background (white wall with subtle medical texture), direct eye contact with camera, serious but approachable expression, natural minimal makeup, dark hair neatly styled. Professional studio lighting, clean neutral background. Portrait orientation 9:16, head to upper chest framing.',
-  hs:'[directa a cámara, tono serio y deliberado]\n\n"Como médica, hay prácticas de skincare que yo no haría. No porque sean dañinas — sino porque solos no atacan la causa.\n\n[pausa]\n\nPrimero: usar una crema de colágeno como tratamiento antiedad principal. La molécula de colágeno no penetra la epidermis. Es biología básica.\n\n[pausa]\n\nSegundo: tomar colágeno hidrolizado sin vitamina C. Sin el cofactor, la absorción cae drásticamente. Es un error muy común.\n\n[pausa]\n\nTercero: blanqueadores tópicos sin resolver la inflamación interna. Estás tratando el síntoma en la superficie mientras la causa sigue activa abajo.\n\n[mira directo, pausa larga]\n\nNo digo que no funcionen. Digo que solos no son suficientes."\n\n[fin sin sonrisa, corte directo]'
-},
-{
-  id:'A02',n:'17',fu:'MOFU',pi:'A',fm:'Talking Head HeyGen · Educación Científica',
-  hk:'"El eje intestino-piel — explicación médica en 60 segundos"',
-  hv:'Dra. Paola explica el concepto con lenguaje técnico-accesible. Contenido más importante del canal.',
-  tl:'HeyGen Avatar + Motion Graphics overlay',vl:'Voz Dra. Paola · HeyGen',isU:true,
-  cuts:[
-    ['0–8s','VO: "El eje intestino-piel es uno de los hallazgos más importantes de la dermatología moderna."'],
-    ['8–18s','VO: "El intestino y la piel comparten origen embriológico. Se desarrollan del mismo tejido."'],
-    ['18–30s','VO: "Cuando el microbioma intestinal se altera, produce metabolitos inflamatorios que circulan en sangre."'],
-    ['30–42s','VO: "Esos metabolitos llegan a la dermis, activan el sistema inmune local y producen lo que vemos: acné, rosácea, dermatitis."'],
-    ['42–52s','VO: "No es hipótesis. Hay más de 300 estudios en los últimos 10 años que documentan esta conexión."'],
-    ['52–60s','VO: "Por eso cuando tratas solo la piel, estás tratando el mensajero, no el mensaje."']
-  ],
-  pts:[],
-  mp:'Colombian female doctor, professional and intelligent appearance, white lab coat, subtle medical office setting or clean white background, direct confident gaze, slight forward lean suggesting engagement with viewer, natural authoritative posture. Excellent portrait lighting, no distractions. 9:16 vertical format, face and upper body visible.',
-  hs:'[tono de médica en consulta, seria y clara]\n\n"El eje intestino-piel es uno de los hallazgos más importantes de la dermatología moderna. Y la mayoría de las personas nunca lo escuchó de su médico.\n\n[pausa]\n\nEl intestino y la piel comparten origen embriológico. Se desarrollaron del mismo tejido en el útero.\n\n[pausa]\n\nCuando el microbioma intestinal se desequilibra — por antibióticos, estrés crónico, mala alimentación — produce metabolitos inflamatorios que entran al torrente sanguíneo.\n\n[pausa deliberada]\n\nEsos metabolitos llegan a la dermis, activan el sistema inmune local, y producen lo que vemos clínicamente: acné inflamatorio, rosácea, dermatitis atópica.\n\n[mirando directo]\n\nNo es hipótesis alternativa. Hay más de 300 estudios publicados en los últimos 10 años que documentan esta conexión.\n\n[pausa final]\n\nPor eso cuando tratas solo la piel, estás tratando el mensajero, no el mensaje."\n\n[corte directo, sin cierre comercial]'
-},
-{
-  id:'A03',n:'18',fu:'MOFU',pi:'A',fm:'Talking Head HeyGen · Testimonio Clínico',
-  hk:'"Lo que veo en consulta cada semana — y lo que más me sorprende"',
-  hv:'Dra. Paola cuenta patrones reales de pacientes. Tono íntimo de consulta.',
-  tl:'HeyGen Avatar · tono narrativo',vl:'Voz Dra. Paola · HeyGen',isU:true,
-  cuts:[
-    ['0–8s','VO: "Cada semana llegan pacientes con la misma historia."'],
-    ['8–18s','VO: "Llevan años usando el mejor skincare del mercado. Y su piel sigue igual o peor."'],
-    ['18–28s','VO: "Lo primero que pregunto siempre es qué comen. No qué cremas usan."'],
-    ['28–38s','VO: "Nueve de cada diez tienen en común: intestino irritable, estrés crónico, dieta alta en ultraprocesados."'],
-    ['38–45s','VO: "No es coincidencia. Es el eje intestino-piel actuando en tiempo real."']
-  ],
-  pts:[],
-  mp:'Colombian female doctor in professional consultation office setting, warm but professional lighting, white coat, looking directly at camera with empathetic yet authoritative expression. Mid-shot showing face and upper chest. Medical office background subtly visible. Natural professional appearance, minimal makeup, confident posture. 9:16 vertical.',
-  hs:'[tono más cercano, como hablando con una paciente]\n\n"Cada semana llegan pacientes con la misma historia a mi consulta.\n\n[pausa]\n\nLlevan años — a veces décadas — invirtiendo en el mejor skincare del mercado. Y su piel sigue igual. O peor.\n\n[pausa]\n\nLo primero que pregunto siempre no es qué cremas usan. Es qué comen.\n\n[pequeña pausa]\n\nY nueve de cada diez tienen algo en común: intestino irritable, estrés crónico no gestionado, y una dieta con alta carga de ultraprocesados.\n\n[directo, serio]\n\nNo es coincidencia. Es el eje intestino-piel actuando en tiempo real frente a mí, en cada consulta.\n\n[pausa final]\n\nLa pregunta correcta no es \'¿qué me pongo en la cara?\' Es \'¿qué le estoy dando a mi intestino?\'"\n\n[fin]'
-},
-{
-  id:'A04',n:'19',fu:'MOFU',pi:'A',fm:'Talking Head HeyGen · Desmontando Mitos',
-  hk:'"Dra. Paola vs. los mitos de colágeno que TikTok repite sin parar"',
-  hv:'Formato directo. Mito → realidad médica. Alta probabilidad de guardados.',
-  tl:'HeyGen Avatar · formato mito/realidad',vl:'Voz Dra. Paola · HeyGen',isU:true,
-  cuts:[
-    ['0–5s','Hook: "Hay 3 cosas sobre el colágeno que TikTok lleva años diciendo mal."'],
-    ['5–18s','Mito 1: "El colágeno marino es el mejor" → Realidad: el tipo I hidrolizado con buena biodisponibilidad importa más que la fuente'],
-    ['18–30s','Mito 2: "Más gramos = mejores resultados" → Realidad: sin cofactores (Vit C, zinc) la absorción cae al 30%'],
-    ['30–42s','Mito 3: "El colágeno vegetal existe" → Realidad: el colágeno es exclusivamente animal. Lo vegetal son precursores.'],
-    ['42–45s','Cierre: "La información correcta hace la diferencia entre resultados y dinero perdido."']
-  ],
-  pts:[],
-  mp:'Same doctor character as previous, white lab coat, slightly leaning forward with one hand raised in gentle emphasis gesture. Direct gaze, professional setting. Slightly more animated expression while making a point. Clean white background. 9:16 vertical portrait.',
-  hs:'[abriendo con autoridad calmada]\n\n"Hay tres cosas sobre el colágeno que TikTok lleva años repitiendo mal. Y me importa que las escuches correctamente.\n\n[pausa]\n\nMito uno: el colágeno marino es superior. Realidad médica: lo que importa es el tipo de colágeno y su grado de hidrólisis — su biodisponibilidad. La fuente es secundaria.\n\n[pausa]\n\nMito dos: más gramos equivale a mejores resultados. Falso. Sin cofactores — vitamina C y zinc — la síntesis de colágeno cae dramáticamente. Puedes tomar 20 gramos y absorber el 30%.\n\n[pausa]\n\nMito tres: existe el colágeno vegetal. No existe. El colágeno es una proteína exclusivamente animal. Lo que se vende como \'colágeno vegetal\' son precursores de su síntesis. Muy distintos.\n\n[mira directo]\n\nLa información correcta marca la diferencia entre resultados y dinero perdido."\n\n[fin]'
-},
-{
-  id:'A05',n:'20',fu:'BOFU',pi:'A',fm:'Fundadora · Historia de Origen',
-  hk:'"Por qué una médica especialista creó un suplemento de gomitas"',
-  hv:'Historia de origen. Mayor vínculo emocional del pilar. Contenido de conversión.',
-  tl:'HeyGen Avatar · tono personal',vl:'Voz Dra. Paola · HeyGen · más emotivo',isU:true,
-  cuts:[
-    ['0–8s','VO: "Nunca pensé que terminaría formulando suplementos. Soy médica."'],
-    ['8–18s','VO: "Pero llevaba años viendo en consulta que ninguna crema resolvía lo que mis pacientes traían."'],
-    ['18–30s','VO: "Cuando leí los primeros estudios sobre el eje intestino-piel, todo hizo clic. La piel era el síntoma. El intestino, la causa."'],
-    ['30–42s','VO: "Pasé un año formulando Glow Gummies con los ingredientes que la evidencia respaldaba. Colágeno tipo I, zinc, biotina, probióticos."'],
-    ['42–52s','VO: "No quería otro suplemento más. Quería el que yo le daría a mis pacientes."'],
-    ['52–60s','VO: "Eso es Glow Gummies. No una marca de bienestar. Una herramienta clínica presentada como debería ser."']
-  ],
-  pts:[],
-  mp:'Colombian female doctor in professional but slightly more relaxed setting — white coat but softer lighting, warm tones. Genuine authentic expression, slight smile possible in this piece specifically. Direct but warm eye contact. The same woman but slightly more personal/approachable. Medical office background. 9:16 vertical.',
-  hs:'[tono más personal que los otros videos, genuino]\n\n"Nunca pensé que terminaría formulando suplementos. Soy médica. Mi trabajo es diagnosticar y tratar.\n\n[pausa]\n\nPero llevaba años sentada frente a pacientes que llegaban con la misma historia: mucho dinero invertido en skincare, sin resultados duraderos.\n\n[pausa]\n\nCuando estudié en profundidad la conexión intestino-piel, algo hizo clic. La piel era el mensajero. El intestino, el origen. Nadie estaba atacando el origen.\n\n[pausa reflexiva]\n\nPasé un año revisando evidencia clínica. Formulé una combinación: colágeno tipo I hidrolizado, zinc quelado, biotina y cepas probióticas específicas para el eje intestino-piel.\n\n[directo]\n\nNo quería crear otro suplemento de wellness. Quería crear el que yo misma le recomendaría a mis pacientes con respaldo de evidencia real.\n\n[pausa final, mira a cámara]\n\nEso es Glow Gummies. No una marca de bienestar. Una herramienta clínica en el formato correcto."\n\n[corte]'
-},
-{
-  id:'A06',n:'21',fu:'MOFU',pi:'A',fm:'Talking Head HeyGen · Green Screen · Tendencias',
-  hk:'"Dra. Paola evalúa los suplementos más virales de TikTok con criterio clínico"',
-  hv:'Doctora frente a screenshots de suplementos trending como fondo',
-  tl:'HeyGen Green Screen + Fondos de TikTok',vl:'Voz Dra. Paola · HeyGen',isU:true,
-  cuts:[
-    ['0–6s','Fondo: screenshot chlorophyll water viral. VO: "El agua de clorofila. ¿Funciona para la piel?"'],
-    ['6–16s','VO: "La evidencia es débil. La clorofila oral tiene baja biodisponibilidad. No llega a la piel en concentraciones útiles."'],
-    ['16–26s','Fondo: colágeno marino viral. VO: "Colágeno marino trending. ¿Es mejor que el bovino?"'],
-    ['26–36s','VO: "Si el grado de hidrólisis es adecuado, la fuente importa menos de lo que TikTok sugiere."'],
-    ['36–45s','Cierre. VO: "Tendencia no es evidencia. Pero tampoco significa que no funciona. La diferencia está en leer los estudios."']
-  ],
-  pts:[],
-  mp:'Professional Colombian doctor, same character as previous videos, positioned slightly to one side of frame to leave room for green screen background replacement. White coat, direct gaze at camera with analytical, evaluating expression. Clean neutral background for easy green screen. 9:16 vertical, mid-shot.',
-  hs:'[tono analítico, evaluando con criterio clínico]\n\n"El agua de clorofila. Tuvo millones de vistas el año pasado. ¿Funciona para la piel?\n\n[pausa]\n\nLa evidencia actual es débil. La clorofila oral tiene baja biodisponibilidad sistémica — no llega a la piel en concentraciones biológicamente relevantes. El efecto es principalmente antioxidante local, no dérmico.\n\n[pausa]\n\nAhora, el colágeno marino. \'Es superior al bovino\' dicen todos los videos. ¿Es real?\n\n[niega levemente con la cabeza]\n\nDepende del grado de hidrólisis. Un colágeno bovino bien hidrolizado puede tener mejor biodisponibilidad que un marino mal procesado. La fuente es el tercer factor a considerar, no el primero.\n\n[directo a cámara]\n\nTendencia no es sinónimo de evidencia. Pero tampoco descarta que funcione. La diferencia está en leer los estudios, no el número de likes."\n\n[fin]'
-}
-];
-
-// ── Populate copy map ─────────────────────────────────
-VIDEOS.forEach(v => {
-  if(!v.isU){
-    v.pts.forEach((p,i) => { cm[v.id+'-p'+i] = p[1]; });
-    if(v.vo) cm[v.id+'-vo'] = v.vo;
-  } else {
-    if(v.mp) cm[v.id+'-mp'] = v.mp;
-    if(v.hs) cm[v.id+'-hs'] = v.hs;
-  }
-});
-
-// ── Render cards ──────────────────────────────────────
-function piLabel(pi){
-  const m={E:'Entretenimiento',ED:'Educación',V:'Viral',A:'Autoridad'};
-  return m[pi]||pi;
-}
-
-function renderCards(fuFilter,piFilter){
-  const g = document.getElementById('cardsGrid');
-  if(!g) return;
-  const filtered = VIDEOS.filter(v =>
-    (fuFilter==='all'||v.fu===fuFilter) &&
-    (piFilter==='all'||v.pi===piFilter)
-  );
-  g.innerHTML = filtered.map(v => `
-    <div class="v-card" data-id="${v.id}" data-open="0">
-      <div class="v-card-top">
-        <span class="fu-badge fu-${v.fu}">${v.fu}</span>
-        <span class="pi-badge">${piLabel(v.pi)}</span>
-      </div>
-      <div class="v-card-id">${v.id} · ${v.n.padStart(2,'0')}</div>
-      <div class="v-card-fmt">${v.fm}</div>
-      <div class="v-card-hook">${v.hk}</div>
-      <div class="v-card-meta">
-        <span class="v-card-tag">${v.tl}</span>
-        ${v.isU?'<span class="v-card-tag" style="color:#F9C846;background:rgba(249,200,70,.1)">HeyGen</span>':''}
-      </div>
-    </div>
-  `).join('');
-
-  // Inject detail panels after each card
-  filtered.forEach(v => {
-    const card = g.querySelector(`[data-id="${v.id}"]`);
-    if(!card) return;
-    const panel = document.createElement('div');
-    panel.className='v-detail';
-    panel.id='det-'+v.id;
-    panel.innerHTML = buildDetail(v);
-    card.after(panel);
-  });
-}
-
-function buildDetail(v){
-  let cutsHtml = v.cuts.map(c=>`
-    <div class="cut-row">
-      <span class="cut-ts">${c[0]}</span>
-      <span class="cut-desc">${c[1]}</span>
-    </div>`).join('');
-
-  let rightHtml = '';
-  if(!v.isU){
-    let promptsHtml = v.pts.map((p,i)=>`
-      <div class="prompt-block">
-        <div class="prompt-label">${p[0]}
-          <button class="copy-btn" data-key="${v.id}-p${i}">Copiar</button>
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Estrategia de Contenido Orgánico</h1>
+                <p class="text-sm text-gray-500 mt-1">ICP: Mujeres colombianas 20-42 años · Eje Intestino-Piel</p>
+            </div>
+            <div>
+                <span class="inline-flex items-center rounded-md bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700 ring-1 ring-inset ring-purple-700/10">v1.0.0</span>
+            </div>
         </div>
-        <div class="prompt-text">${p[1].replace(/</g,'&lt;')}</div>
-      </div>`).join('');
-    let voHtml = v.vo?`
-      <div class="vo-block">
-        <div class="vo-label">🎙 Voz en off (ElevenLabs)
-          <button class="copy-btn" data-key="${v.id}-vo">Copiar</button>
-        </div>
-        <div class="vo-text">${v.vo.replace(/\n/g,'<br>')}</div>
-      </div>`:'';
-    rightHtml = `<div><h4>Prompts IA + Voz en off</h4>${promptsHtml}${voHtml}</div>`;
-  } else {
-    let mpHtml = v.mp?`
-      <div class="prompt-block">
-        <div class="prompt-label">📸 Prompt foto modelo 9:16 (inglés)
-          <button class="copy-btn" data-key="${v.id}-mp">Copiar</button>
-        </div>
-        <div class="prompt-text">${v.mp.replace(/</g,'&lt;')}</div>
-      </div>`:'';
-    let hsHtml = v.hs?`
-      <div class="vo-block">
-        <div class="vo-label">🎬 Script HeyGen (español)
-          <button class="copy-btn" data-key="${v.id}-hs">Copiar</button>
-        </div>
-        <div class="vo-text">${v.hs.replace(/\n/g,'<br>').replace(/</g,'&lt;').replace(/&lt;br>/g,'<br>')}</div>
-      </div>`:'';
-    let note=`<div class="ugc-note">⚙️ HeyGen: voz latina · tono neutro-serio · velocidad media-baja · subtítulos activados · ruido ambiente +10%</div>`;
-    rightHtml=`<div><h4>Prompt foto modelo + Script HeyGen</h4>${mpHtml}${hsHtml}${note}</div>`;
-  }
+    </header>
 
-  return `
-    <div class="detail-grid">
-      <div><h4>Timeline de cortes · ${v.tl}</h4>${cutsHtml}</div>
-      ${rightHtml}
-    </div>
-    <button class="detail-close" data-close="${v.id}">↑ Cerrar</button>`;
-}
+    <main class="max-w-5xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        
+        <section class="mb-12 space-y-6">
+            <div class="bg-[#FDF2F8] rounded-xl border border-[#FBCFE8] p-6 text-center shadow-sm">
+                <h2 class="text-xl font-bold text-[#831843] mb-2">ICP · Ideal Customer Profile</h2>
+                <p class="text-[#9D174D] font-medium">Mujeres colombianas 20-42 años · Conscientes de su piel · Dispuestas a invertir en salud interna</p>
+            </div>
 
-// ── Event delegation ──────────────────────────────────
-let fuF='all', piF='all';
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-[#FDF2F8] rounded-xl border border-[#FBCFE8] p-5 shadow-sm text-center transition-transform hover:-translate-y-1">
+                    <h3 class="font-bold text-[#831843] text-lg mb-1">Preventora (20-25)</h3>
+                    <p class="text-[#9D174D] text-sm">TikTok-first · quiere glow</p>
+                </div>
+                <div class="bg-[#EEF2FF] rounded-xl border border-[#C7D2FE] p-5 shadow-sm text-center transition-transform hover:-translate-y-1">
+                    <h3 class="font-bold text-[#312E81] text-lg mb-1">Ansiosa (26-31)</h3>
+                    <p class="text-[#4338CA] text-sm">Nota cambios · busca solución</p>
+                </div>
+                <div class="bg-[#FFF7ED] rounded-xl border border-[#FFEDD5] p-5 shadow-sm text-center transition-transform hover:-translate-y-1">
+                    <h3 class="font-bold text-[#7C2D12] text-lg mb-1">Urgente (32+)</h3>
+                    <p class="text-[#C2410C] text-sm">Señales reales · acción ya</p>
+                </div>
+            </div>
 
-document.addEventListener('click', e => {
-  // Tab navigation
-  const tabBtn = e.target.closest('.tab-btn');
-  if(tabBtn){
-    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-    document.querySelectorAll('.tab-section').forEach(s=>s.classList.remove('active'));
-    tabBtn.classList.add('active');
-    document.getElementById('tab-'+tabBtn.dataset.tab).classList.add('active');
-    if(tabBtn.dataset.tab==='creativos') renderCards(fuF,piF);
-    return;
-  }
-  // Funnel filter
-  const fb = e.target.closest('.filter-btn[data-f]');
-  if(fb){
-    document.querySelectorAll('.filter-btn[data-f]').forEach(b=>b.classList.remove('on'));
-    fb.classList.add('on');
-    fuF = fb.dataset.f;
-    renderCards(fuF,piF);
-    return;
-  }
-  // Pilar filter
-  const pb = e.target.closest('.filter-btn[data-p]');
-  if(pb){
-    document.querySelectorAll('.filter-btn[data-p]').forEach(b=>b.classList.remove('on'));
-    pb.classList.add('on');
-    piF = pb.dataset.p;
-    renderCards(fuF,piF);
-    return;
-  }
-  // Card click
-  const card = e.target.closest('.v-card');
-  if(card && !e.target.closest('.copy-btn') && !e.target.closest('.detail-close')){
-    const id = card.dataset.id;
-    const panel = document.getElementById('det-'+id);
-    const isOpen = card.dataset.open==='1';
-    if(isOpen){
-      card.dataset.open='0';
-      card.classList.remove('open');
-      if(panel) panel.classList.remove('open');
-    } else {
-      card.dataset.open='1';
-      card.classList.add('open');
-      if(panel) panel.classList.add('open');
-      panel.scrollIntoView({behavior:'smooth',block:'nearest'});
-    }
-    return;
-  }
-  // Close button
-  const cl = e.target.closest('.detail-close');
-  if(cl){
-    const id = cl.dataset.close;
-    const card2 = document.querySelector(`[data-id="${id}"]`);
-    const panel2 = document.getElementById('det-'+id);
-    if(card2){card2.dataset.open='0';card2.classList.remove('open');}
-    if(panel2) panel2.classList.remove('open');
-    return;
-  }
-  // Copy btn
-  const cp = e.target.closest('.copy-btn');
-  if(cp){
-    e.stopPropagation();
-    const key = cp.dataset.key;
-    const text = cm[key]||'';
-    navigator.clipboard.writeText(text).then(()=>{
-      const orig=cp.textContent;
-      cp.textContent='Copiado ✓';
-      cp.style.background='var(--color-teal)';
-      cp.style.color='#000';
-      setTimeout(()=>{cp.textContent=orig;cp.style.background='';cp.style.color='';},1800);
-    });
-    return;
-  }
-});
-</script>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 border-l-4 border-l-red-400">
+                    <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2 flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        Su creencia actual (A romper)
+                    </h3>
+                    <p class="text-sm text-gray-600">Cree que la piel se cuida solo desde afuera con cremas y sérums. No conecta su digestión con su piel. Ha probado rutinas costosas sin resultados consistentes.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 border-l-4 border-l-emerald-400">
+                    <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2 flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Su insight activador
+                    </h3>
+                    <p class="text-sm text-gray-600">Cuando entiende el eje intestino-piel, cambia su marco mental. La Dra. Paola es la autoridad clínica que rompe el paradigma y presenta la solución de raíz.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Distribución Semanal (7 posts)</h2>
+            <div class="grid grid-cols-2 md:grid-cols-7 gap-3 text-center text-sm">
+                <div class="bg-amber-100 text-amber-800 p-3 rounded-lg shadow-sm flex flex-col justify-center">
+                    <span class="mb-1">Lunes</span>
+                    <span class="font-bold text-xs uppercase tracking-wide">Educación</span>
+                </div>
+                <div class="bg-purple-100 text-purple-800 p-3 rounded-lg shadow-sm flex flex-col justify-center">
+                    <span class="mb-1">Martes</span>
+                    <span class="font-bold text-xs uppercase tracking-wide">Autoridad</span>
+                </div>
+                <div class="bg-blue-100 text-blue-800 p-3 rounded-lg shadow-sm flex flex-col justify-center">
+                    <span class="mb-1">Miércoles</span>
+                    <span class="font-bold text-xs uppercase tracking-wide">Viral</span>
+                </div>
+                <div class="bg-amber-100 text-amber-800 p-3 rounded-lg shadow-sm flex flex-col justify-center">
+                    <span class="mb-1">Jueves</span>
+                    <span class="font-bold text-xs uppercase tracking-wide">Entreten.</span>
+                </div>
+                <div class="bg-emerald-100 text-emerald-800 p-3 rounded-lg shadow-sm flex flex-col justify-center">
+                    <span class="mb-1">Viernes</span>
+                    <span class="font-bold text-xs uppercase tracking-wide">Educación</span>
+                </div>
+                <div class="bg-blue-100 text-blue-800 p-3 rounded-lg shadow-sm flex flex-col justify-center">
+                    <span class="mb-1">Sábado</span>
+                    <span class="font-bold text-xs uppercase tracking-wide">Viral</span>
+                </div>
+                <div class="bg-amber-100 text-amber-800 p-3 rounded-lg shadow-sm flex flex-col justify-center">
+                    <span class="mb-1">Domingo</span>
+                    <span class="font-bold text-xs uppercase tracking-wide">Entreten.</span>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200 text-sm text-gray-700 flex items-start sm:items-center">
+                <svg class="w-5 h-5 mr-3 text-gray-500 shrink-0 mt-0.5 sm:mt-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <p><strong>Regla de oro:</strong> Ningún pilar menciona precio ni hace CTA de compra directa. El producto aparece naturalmente solo en <em>Autoridad</em> y <em>Educación</em>.</p>
+            </div>
+        </section>
+
+        <div id="pillars-container" class="space-y-10"></div>
+    </main>
+
+    <script>
+        const contentData = [
+            {
+                id: "pilar-1",
+                title: "01 · Entretenimiento",
+                description: "Identificación de audiencia. El objetivo es que la persona se vea reflejada sin que el contenido huela a marca. Sin producto, sin CTA, sin doctora visible.",
+                color: "amber",
+                scripts: [
+                    {
+                        code: "E-01",
+                        title: "El tipo de piel según lo que desayunas",
+                        format: "Reel 20s · Trending sound · Texto en pantalla",
+                        visual: "Video aesthetic (b-roll) de una chica preparándose por la mañana o tomando diferentes desayunos.",
+                        text: "Texto en pantalla dinámico que cambia al ritmo del beat:\n\n[Beat 1] Si desayunas café solo → Piel deshidratada y apagada.\n[Beat 2] Si desayunas avena con fruta → Piel feliz y glowy.\n[Beat 3] Si desayunas NADA → Tu barrera cutánea pidiendo auxilio.\n\nCaption: Tu skincare de mañana empieza en la cocina, no en el baño. 👀"
+                    },
+                    {
+                        code: "E-02",
+                        title: "POV: Llegaste a los 28 y tu piel cambió",
+                        format: "Reel 15s · Audio dramático/Cómico",
+                        visual: "Actuación ligera. Una chica mirándose al espejo muy de cerca, estirándose la piel levemente, con cara de confusión.",
+                        text: "Texto en pantalla: POV: Llegaste a los 28 y de la noche a la mañana la crema hidratante de siempre dejó de funcionar y tu piel decidió que ahora tiene 'textura'.\n\nCaption: ¿Alguien más sintió el cambio de switch o fui solo yo? 🥲"
+                    },
+                    {
+                        code: "E-03",
+                        title: "Rating de hábitos que destruyen tu piel",
+                        format: "Reel o Carrusel animado",
+                        visual: "Formatos de 'Rating things I did' con pantalla verde o texto sobre fondo estético.",
+                        text: "Texto en pantalla:\n- Dormir 5 horas: 8/10. Ojeras y piel gris asegurada.\n- Comer ultraprocesados toda la semana: 100/10. Tu intestino llora y tu frente se llena de granitos.\n- Estrés crónico por el trabajo: 10/10. Hola cortisol, adiós colágeno.\n\nCaption: El skincare no puede arreglar lo que el estrés y la mala alimentación rompen. ¿Cuántos puntos tienes?"
+                    },
+                    {
+                        code: "E-04",
+                        title: "Meme: Crema de $300k vs. Intestino",
+                        format: "Imagen / Texto en pantalla 10s",
+                        visual: "Meme clásico de 'El tipo fuerte vs el tipo débil' o simplemente un gráfico de balanza.",
+                        text: "Texto:\nLado izquierdo: Yo comprando una crema de $300k para el 'glow'.\nLado derecho: Mi intestino inflamado pidiendo ayuda a gritos.\n\nCaption: Prioridades 🫠"
+                    },
+                    {
+                        code: "E-05",
+                        title: "Señales de que tu piel pide ayuda desde adentro",
+                        format: "Listicle Reel 30s · Voz en off suave",
+                        visual: "B-roll de rutinas de skincare fallidas, aplicando corrector en granitos, o tocándose la cara con frustración.",
+                        text: "Voz en off: 3 señales claras de que el problema de tu piel no se arregla con más cremas, porque viene desde adentro:\n1. Tienes brotes constantes en la zona de la mandíbula o barbilla.\n2. Tu piel se siente tirante y seca, sin importar cuántas capas de ácido hialurónico te pongas.\n3. Te levantas hinchada y tu rostro se ve 'apagado' y sin luz natural.\n\nCaption: Si tienes más de dos, tu piel está intentando decirte algo sobre tu salud interna."
+                    }
+                ]
+            },
+            {
+                id: "pilar-2",
+                title: "02 · Educación",
+                description: "Valor que la gente pagaría por escuchar. Posiciona el eje intestino-piel como marco conceptual. El producto aparece naturalmente al final de algunos.",
+                color: "emerald",
+                scripts: [
+                    {
+                        code: "ED-01",
+                        title: "El eje intestino-piel en 60 segundos",
+                        format: "Carrusel",
+                        visual: "Gráficas limpias, estilo infografía minimalista premium.",
+                        text: "Slide 1 (Hook): ¿Sabías que tu piel es el chismoso de tu intestino?\nSlide 2: Existe una conexión directa llamada 'Eje Intestino-Piel'. Básicamente, tu intestino y tu piel hablan todo el tiempo.\nSlide 3: Si tu digestión está inflamada (por estrés, mala dieta o falta de nutrientes), esas señales de alarma viajan por tu cuerpo...\nSlide 4: ...y adivina dónde estallan. Sí, en forma de acné, rojeces o resequedad extrema.\nSlide 5: Ningún sérum costoso puede apagar un incendio que empezó en tu estómago.\nSlide 6: Sanar de adentro hacia afuera no es un cliché, es biología."
+                    },
+                    {
+                        code: "ED-02",
+                        title: "Por qué el colágeno tópico no es lo que produces",
+                        format: "Carrusel educativo",
+                        visual: "Contraste visual entre una molécula grande y la estructura celular.",
+                        text: "Slide 1: La cruda verdad sobre las cremas con colágeno.\nSlide 2: La molécula del colágeno es demasiado GRANDE para penetrar las capas profundas de tu piel si te la aplicas en crema.\nSlide 3: Lo único que hace es darte una hidratación superficial y temporal.\nSlide 4: ¿El verdadero secreto? Darle a tu cuerpo los precursores exactos (vitaminas y minerales) para que él mismo VUELVA a fabricar su propio colágeno.\nSlide 5: Inyectarlo rellena. Untarlo hidrata. Producirlo internamente transforma."
+                    },
+                    {
+                        code: "ED-03",
+                        title: "Qué hace el zinc en tu piel (y por qué te falta)",
+                        format: "Reel 45s · Voice-over",
+                        visual: "B-roll estético de ingredientes, piel sana, y un vaso de agua.",
+                        text: "Voz en off: Hablemos del mineral más subestimado en el mundo del skincare: el Zinc.\nMientras tú gastas fortunas en ácidos y exfoliantes, el Zinc es el obrero que repara tu piel desde adentro.\nRegula la producción de sebo, baja la inflamación de esos brotes dolorosos y actúa como un escudo antioxidante.\nEl problema es que la dieta moderna casi no nos aporta el suficiente.\nSi tienes piel con tendencia acneica o heridas que tardan en sanar, quizás no necesitas cambiar de jabón, necesitas revisar tus micronutrientes."
+                    },
+                    {
+                        code: "ED-04",
+                        title: "Inflamación silenciosa: el enemigo invisible",
+                        format: "Carrusel",
+                        visual: "Gráficos de temperatura corporal o un 'iceberg'.",
+                        text: "Slide 1: Tu piel está envejeciendo más rápido y el culpable es invisible: La Inflamación Silenciosa.\nSlide 2: No es una herida roja o hinchada. Es una respuesta interna constante de bajo nivel de tu sistema inmune.\nSlide 3: ¿Qué la causa? Estrés crónico, sueño pobre y una mala digestión que permite el paso de toxinas.\nSlide 4: Esta inflamación degrada tu colágeno y elastina las 24 horas del día. Es como dejar el motor del carro encendido sin avanzar.\nSlide 5: Por eso, calmar el intestino es el paso 1 de cualquier rutina anti-edad real."
+                    },
+                    {
+                        code: "ED-05",
+                        title: "5 mitos de skincare que sigues creyendo",
+                        format: "Reel 60s · Pantalla dividida o texto dinámico",
+                        visual: "Texto tachando mitos.",
+                        text: "Voz en off / Texto: 5 mitos de skincare que en 2025 ya tenemos que soltar:\n1. 'Tomar 2 litros de agua hidrata la piel'. Falso, si tu barrera cutánea está dañada, el agua se evapora.\n2. 'Si pica, está haciendo efecto'. No, si pica estás quemando tu barrera protectora.\n3. 'El acné de adulto es hormonal y ya'. A veces lo hormonal es solo la punta del iceberg de un intestino inflamado.\n4. 'Necesitas 10 pasos en tu rutina'. Tu piel se estresa con tanto químico activo.\n5. 'La belleza es solo externa'. Tu piel es un órgano, si no lo nutres desde el torrente sanguíneo, no hay magia tópica que valga."
+                    }
+                ]
+            },
+            {
+                id: "pilar-3",
+                title: "03 · Viral",
+                description: "Alcance masivo con temas de tendencia global adaptados al nicho de longevidad y eje intestino-piel.",
+                color: "blue",
+                scripts: [
+                    {
+                        code: "V-01",
+                        title: "La era de la longevidad — 'Glow era'",
+                        format: "Reel Corto · B-roll cinemático",
+                        visual: "Montaje rápido de hábitos saludables: tomando sol por la mañana, un jugo verde o suplementos, caminando, haciendo skincare simple.",
+                        text: "Texto en pantalla: Dejando atrás la era de ponerme 20 ácidos diferentes en la cara para tapar el problema...\nY entrando oficialmente en mi 'Longevity & Glow Era': sanando mi digestión, bajando picos de cortisol y construyendo una piel fuerte desde la raíz.\n\nCaption: El verdadero lujo silencioso es tener una salud celular impecable."
+                    },
+                    {
+                        code: "V-02",
+                        title: "'Girl health' + Eje intestino-piel",
+                        format: "Reel Contraste",
+                        visual: "Pantalla dividida o transición.",
+                        text: "Texto inicio: Lo que TikTok cree que es cuidar la piel (Visual: mujer rodeada de 15 botellas de sérums y cremas carísimas).\nTexto final: Lo que REALMENTE es cuidar la piel (Visual: Mujer tomando agua, comiendo un plato balanceado, tomando sus suplementos y un hidratante básico).\n\nCaption: Menos steps en el baño, más atención a lo que absorbe tu intestino."
+                    },
+                    {
+                        code: "V-03",
+                        title: "Reacción a rutina de skincare viral",
+                        format: "Green screen",
+                        visual: "Video de fondo de alguna influencer poniéndose demasiados productos irritantes.",
+                        text: "Voz en off o texto (opinión): Viendo cómo gasta $500 dólares en productos tópicos que van a destruir su barrera cutánea...\nCuando el 80% de ese enrojecimiento y textura se resolvería balanceando su microbiota intestinal y dándole los nutrientes correctos a su cuerpo.\n\nCaption: El over-skincare es real. A veces tu cara solo necesita paz y tu estómago nutrientes."
+                    },
+                    {
+                        code: "V-04",
+                        title: "What I eat in a day + piel",
+                        format: "Mini-vlog rápido",
+                        visual: "Desayuno, almuerzo, cena estética.",
+                        text: "Voz en off: Lo que como en un día enfocado en bajar la inflamación y ayudar a mi piel.\nDesayuno: Proteína y grasas saludables (cero picos de glucosa).\nAlmuerzo: Muchos colores, antioxidantes naturales.\nCena: Ligera para dormir bien.\nEl secreto: No se trata de comer perfecto, se trata de no darle a tu cuerpo alimentos que generen una respuesta inflamatoria que al día siguiente se convierte en un brote o rojez.\n\nCaption: Eres lo que absorbes."
+                    },
+                    {
+                        code: "V-05",
+                        title: "Audio trending + situación digestión",
+                        format: "Meme Video",
+                        visual: "Lip-sync de un audio de comedia en tendencia.",
+                        text: "Texto: Mi crema hidratante viendo cómo me como una pizza entera con lácteos y gluten sabiendo que mañana ella tendrá que lidiar con las consecuencias en mi barbilla.\n\nCaption: Haciendo su mejor esfuerzo desde afuera 🫡"
+                    }
+                ]
+            },
+            {
+                id: "pilar-4",
+                title: "04 · Autoridad (Dra. Paola - HeyGen)",
+                description: "Avatar hiperrealista. Tono serio, directo, profesional. El orgánico calienta, la doctora posiciona.",
+                color: "purple",
+                scripts: [
+                    {
+                        code: "A-01",
+                        title: "Como médica, esto no lo haría",
+                        format: "Talking head HeyGen 45s",
+                        visual: "Dra. Paola directa a cámara. Fondo de consultorio limpio. Subtítulos dinámicos.",
+                        text: "[Pausa deliberada, mirada seria]\nComo médica, hay algo que jamás le haría a mi piel: gastar cientos de dólares en cremas de lujo mientras ignoro mi salud digestiva.\nEs médicamente ilógico. Tu piel es el reflejo final de lo que ocurre en tu torrente sanguíneo.\nSi tienes inflamación sistémica en tu intestino, tu cuerpo va a priorizar apagar ese incendio, no mantener tu piel radiante.\nPuedes aplicarte el sérum más caro del mundo, pero si tu cuerpo carece de los micronutrientes básicos para la regeneración celular, estás tirando tu dinero.\nEl cuidado real empieza en las células, no en los poros."
+                    },
+                    {
+                        code: "A-02",
+                        title: "Explicación científica del eje intestino-piel",
+                        format: "Talking head HeyGen 60s",
+                        visual: "Dra. Paola seria, velocidad media-baja. Textos clave de apoyo al lado.",
+                        text: "Muchos pacientes llegan a mí frustrados por acné adulto o rosácea que no cede. Y la respuesta suele estar en un mecanismo celular que ignoramos: el eje intestino-piel.\nCuando tu barrera intestinal se altera —lo que llamamos permeabilidad intestinal— toxinas y bacterias que deberían ser desechadas, entran al torrente sanguíneo.\nEl sistema inmune reacciona creando inflamación sistémica. ¿Y dónde se manifiesta esta inflamación de forma muy evidente? En la piel.\nTratar el brote con ácidos tópicos es secar la consecuencia, no la causa. Médicamente, necesitamos restaurar el ambiente interno, reducir la inflamación y aportar cofactores de síntesis como Zinc y Selenio."
+                    },
+                    {
+                        code: "A-03",
+                        title: "Lo que veo en consulta cada semana",
+                        format: "Talking head HeyGen 45s",
+                        visual: "Dra. Paola en primer plano, tono conversacional pero clínico.",
+                        text: "Lo que veo en consulta cada semana es un patrón muy claro.\nMujeres de 30 años con piel apagada, pérdida de firmeza y brotes inexplicables, que traen listas interminables de productos de skincare que no les funcionan.\nMi primera pregunta clínica nunca es qué crema usan. Es: '¿Cómo está tu digestión? ¿Cómo estás durmiendo?'\nEn el 90% de los casos, hay un problema de absorción de nutrientes o estrés crónico. Hasta que no corregimos la base metabólica y nutrimos de adentro hacia afuera, la piel simplemente no va a responder."
+                    },
+                    {
+                        code: "A-04",
+                        title: "Desmontando mitos de colágeno",
+                        format: "Talking head HeyGen 50s",
+                        visual: "Dra. Paola con postura firme, corrigiendo un concepto.",
+                        text: "Hablemos de ciencia real sobre el colágeno.\nComprar cremas con colágeno esperando que te devuelvan la firmeza es un error anatómico. La molécula es demasiado densa para atravesar la epidermis.\nPor otro lado, el colágeno hidrolizado tomado puede ayudar, pero no es la foto completa.\nPara que tu cuerpo construya sus propias redes de colágeno y elastina de forma sostenible, necesita precursores biológicos. Vitamina C, Zinc, Biotina, en dosis clínicas exactas.\nNo se trata de untarte lo que te falta, se trata de darle a tus células la materia prima para que lo vuelvan a fabricar."
+                    },
+                    {
+                        code: "A-05",
+                        title: "Por qué creé Glow Gummies",
+                        format: "Talking head HeyGen 60s",
+                        visual: "Tono ligeramente más cálido pero manteniendo la autoridad médica.",
+                        text: "Como especialista, me cansé de ver pacientes frustradas con tratamientos cosméticos a medias.\nMe di cuenta de que faltaba un eslabón: una herramienta que combinara la ciencia del eje intestino-piel con una biodisponibilidad real.\nPor eso formulé Glow. No es un dulce, es un suplemento clínico. Elegimos exactamente las dosis de micronutrientes, vitaminas y antioxidantes que la evidencia médica demuestra que reducen la inflamación celular y reactivan la síntesis de colágeno.\nLa ciencia es clara: la verdadera salud cutánea es una consecuencia de la salud interna."
+                    },
+                    {
+                        code: "A-06",
+                        title: "Opinión médica sobre suplementos virales",
+                        format: "Talking head HeyGen 45s",
+                        visual: "Dra. Paola analítica.",
+                        text: "En TikTok veo tendencias de salud que médicamente son preocupantes, y otras que tienen algo de sentido.\nPor ejemplo, el agua con clorofila o ciertas bebidas virales.\nLa realidad clínica es que no existe un ingrediente mágico. El cuerpo humano trabaja en sinergia.\nTomar un solo superalimento no compensa una deficiencia estructural de Zinc o un intestino inflamado.\nSi vas a invertir en un suplemento, asegúrate de que tenga una matriz de ingredientes formulada para trabajar en conjunto: antioxidantes para frenar el daño y minerales para construir tejido nuevo. Esa es la única medicina anti-edad basada en evidencia."
+                    }
+                ]
+            }
+        ];
+
+        const colorClasses = {
+            amber: { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-800', badge: 'bg-amber-100 text-amber-800' },
+            emerald: { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-800', badge: 'bg-emerald-100 text-emerald-800' },
+            blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', badge: 'bg-blue-100 text-blue-800' },
+            purple: { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-800', badge: 'bg-purple-100 text-purple-800' }
+        };
+
+        const container = document.getElementById('pillars-container');
+
+        contentData.forEach(pilar => {
+            const theme = colorClasses[pilar.color];
+            const section = document.createElement('section');
+            section.className = `rounded-2xl border ${theme.border} bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200`;
+
+            let scriptsHtml = '';
+            pilar.scripts.forEach((script) => {
+                scriptsHtml += `
+                    <details class="group">
+                        <summary class="flex items-center justify-between cursor-pointer px-6 py-4 hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-bold ${theme.badge} border ${theme.border} shrink-0">${script.code}</span>
+                                <span class="font-semibold text-gray-800 group-hover:text-gray-900">${script.title}</span>
+                            </div>
+                            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-300 ml-4 shrink-0">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-5 pt-2 text-sm text-gray-600 bg-gray-50/50">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <span class="font-semibold text-gray-900 block mb-1">Formato:</span>
+                                    <span class="inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200">${script.format}</span>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-900 block mb-1">Visual / Acción:</span>
+                                    ${script.visual}
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm mt-2 relative">
+                                <button onclick="copyScript(this)" data-text="${script.text.replace(/"/g, '&quot;').replace(/\n/g, '&#10;')}" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors" title="Copiar guion">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </button>
+                                <span class="font-semibold text-gray-900 block mb-2 text-xs uppercase tracking-wider">Script / Copy</span>
+                                <p class="whitespace-pre-line text-gray-700 leading-relaxed">${script.text}</p>
+                            </div>
+                        </div>
+                    </details>
+                `;
+            });
+
+            section.innerHTML = `
+                <div class="${theme.bg} px-6 py-5 border-b ${theme.border}">
+                    <h3 class="text-xl font-bold ${theme.text}">${pilar.title}</h3>
+                    <p class="text-sm mt-1 text-gray-700 opacity-90">${pilar.description}</p>
+                </div>
+                <div class="divide-y divide-gray-100">${scriptsHtml}</div>
+            `;
+            container.appendChild(section);
+        });
+
+        function copyScript(btn) {
+            const text = btn.getAttribute('data-text')
+                .replace(/&quot;/g, '"')
+                .replace(/&#10;/g, '\n');
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerHTML = '<svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>';
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
